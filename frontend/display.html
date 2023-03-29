@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .roomenter {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="roomenter">
+        <label for="room">join this room</label>
+        <p id="roomnumber"></p>
+        <input type="text" id="roomvalue" placeholder="enter room id">
+        <button id="entertheroom">Enter</button>
+    </div>
+</body>
+<script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+    integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+    crossorigin="anonymous"></script>
+<script>
+
+    let roomnumber = document.querySelector("#roomnumber");
+    let joinbutton = document.querySelector("#entertheroom");
+    let room=document.querySelector(".roomenter")
+    joinbutton.addEventListener("click", join)
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get("nickname");
+    let roomvalue= urlParams.get("roomvalue");
+    let value= urlParams.get("value");
+    
+    console.log(username)
+    const socket = io("http://localhost:8080/", { transports: ["websocket"] });
+   
+    if(value==0)
+    {
+room.style.display="block";
+socket.emit("username", ({ username }))
+socket.on("roomno", (id) => {
+        roomnumber.innerText = id
+    })
+function join() {
+        let roomvalue = document.querySelector("#roomvalue").value
+        socket.emit("joinroom", ({ username, roomvalue }))
+    }
+    }else if(value==1)
+    {
+        socket.emit("joinroom", ({ username, roomvalue }))
+    }
+   
+
+
+
+socket.on("message",(message)=>{
+    console.log(message)
+})
+
+
+</script>
+
+</html>
