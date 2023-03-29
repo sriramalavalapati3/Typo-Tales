@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Details</title>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+
+</head>
+<style>
+	body {
+		background-color: #f2f2f2;
+	}
+
+	#nav {
+		background-color: white;
+		height: 70px;
+	}
+
+	#rbname {
+		text-decoration: none;
+		font-size: xx-large
+	}
+
+	#logo-name {
+
+		align-items: center;
+		width: 20%;
+		height: 100%;
+		margin-left: 150px;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+		font-family: 'Lato', sans-serif;
+	}
+
+	#logo {
+
+		width: 300px;
+		height: 150px;
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+	}
+
+
+	#body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		width: auto;
+		font-family: 'Lato', sans-serif;
+	}
+
+	#container {
+		background-color: white;
+		padding: 0px 70px 40px 60px;
+		margin-top: 30px;
+		width: 25%;
+	}
+
+	#container p {
+		color: gray;
+	}
+
+	#social-signup {
+		/* width: 200%; */
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	#social-signup>button {
+		background: transparent;
+		width: 200%;
+		border: 0.5px solid rgb(146, 146, 146);
+		height: 40px;
+		color: rgb(133, 133, 133);
+	}
+
+	input {
+		width: 100%;
+		height: 30px;
+	}
+
+	#submit {
+		color: white;
+		background-color: black;
+		width: 102%;
+		height: 35px;
+	}
+
+	ion-icon {
+		font-size: 30px;
+		color: blue;
+	}
+
+	.fa-google {
+		background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.input-control span {
+		color: gray;
+	}
+
+	.input-control .error {
+		color: red;
+		font-size: 10px;
+	}
+
+	#container .no-input {
+		color: red;
+	}
+</style>
+
+<body>
+	<div id="nav">
+		<div id="logo-name">
+			<img id="logo" src="../favicon/logo.png" alt="#">
+			<a id="rbname" href="index.html"></a>
+		</div>
+	</div>
+	<div id="body">
+		<div id="container">
+			<h2>About You</h2>
+			<p>Sign Up With</p>
+			<div id="social-signup">
+				<button> <a href="../html/login.html"><i class="fab fa-google fa-2x"></i></a>
+
+
+
+				</button>
+
+			</div>
+			<p>Or create an email account </p>
+			<p class="no-input"></p>
+			<div class="input-control"> Full Name <br>
+				<input type="text" autocomplete="off" class="full-name" required>
+				<div class="error"></div>
+			</div> <br>
+			<div class="input-control"> Email address <br>
+				<input type="text" autocomplete="off" class="email" required>
+				<div class="error"></div>
+			</div>
+
+			<br>
+			<div class="input-control"> Password <br>
+				<input type="text" autocomplete="off" class="password" required>
+				<div class="error"></div>
+			</div> <br>
+			<div class="input-control"> Confirm Password <br>
+				<input type="text" autocomplete="off" class="confirm-password" required>
+				<div class="error"></div>
+				<br>
+				<!-- <div class="input-control"> Age <br>
+					<input type="text" autocomplete="off" class="age" required>
+					<div class="error"></div>
+				</div> -->
+			</div> <br>
+			<div class="input-control"> Cell Phone Number <span>(Optional)</span><br>
+				<input type="text" autocomplete="off" class="mobile-number" required>
+				<div class="error"></div>
+			</div>
+			<br>
+			<button id="submit">CONTINUE</button>
+		</div>
+	</div>
+</body>
+
+</html>
+<script>
+	let btn = document.querySelector("#submit");
+	
+
+	
+	btn.addEventListener("click", signup)
+
+	
+
+	function signup() {
+		let name = document.querySelector(".full-name").value
+		let email = document.querySelector(".email").value
+		// let age = document.querySelector(".age").value
+		let password = document.querySelector(".password").value
+		let c_password = document.querySelector(".confirm-password").value
+		let mobile = document.querySelector(".mobile-number").value
+
+		let user = {
+			name,  email,  password, c_password, mobile
+		}
+		if (name == '' || email == ''|| password == '' || c_password == '' || mobile == '') {
+			document.querySelector('.no-input').textContent = 'Fill all the details'
+		}
+		else {
+			// document.querySelector('.no-input').textContent = 'SignUp successfull'
+			// fetch("http://localhost:8080/user/register",{
+			// 	method: "POST",
+            //     body: JSON.stringify(user)
+			// }).then((res)=>res.json())
+			// .then((data)=>{
+			// 	console.log(data)
+			// })
+			// .catch((err)=>alert(err))
+
+			// // window.location.href = './login.html'
+
+			fetch('http://localhost:8080/user/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(user)
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      document.querySelector('.no-input').textContent = 'Sign up successful';
+    })
+    .catch(error => {
+      console.error(error);
+      document.querySelector('.no-input').textContent = 'An error occurred';
+    })
+
+		}
+	}
+</script>

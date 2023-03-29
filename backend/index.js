@@ -3,7 +3,11 @@ const app=express();
 const socketio=require("socket.io");
 const mongoose=require("mongoose");
 var randomId = require('random-id');
+const {userRouter}=require("./routes/userRoutes.js")
+var cors = require('cors')
+app.use(cors())
  const {User}=require("./user")
+ app.use("/user",userRouter)
 // length of the id (default is 30)
 var len = 10;
 // pattern to determin how the id will be generated
