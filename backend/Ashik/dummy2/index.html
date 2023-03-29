@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        top: 100px;
+      }
+
+      .car {
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+
+      .input {
+        margin-left: 100px;
+        font-size: 24px;
+        position: relative;
+        top: 250px;
+      }
+
+      .timer {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+      }
+
+      .time {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Typing Speed : <span id="typing-speed-shower"></span></div>
+    <div class="container">
+      <img
+        width="160px"
+        class="car"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-mFTBi_muR16A0lX1mtrvoJMpiZPC7Fbkf6SWv3KATDeJs1750MyakJKyocm22onnj7w&usqp=CAU"
+      />
+
+      <div class="timer">Time: <span class="time"></span></div>
+    </div>
+    <input type="text" class="input" placeholder="Type here" />
+  </body>
+  <script>
+    const container = document.querySelector(".container");
+    const car = document.querySelector(".car");
+    const input = document.querySelector(".input");
+    const timeSpan = document.querySelector(".time");
+    let timeLeft = 80; // set the time limit in seconds
+    let timerId;
+
+    input.addEventListener("input", () => {
+      car.style.marginLeft = input.value.length * 10 + "px";
+    });
+    document.addEventListener("keyup", (event) => {
+      console.log(event.target.value);
+      if (event.keyCode == 8) {
+        console.log("yes it is backspace !");
+      }
+    });
+    // input.addEventListener("keydown",(event)=>{
+    //     console.log(event.code)
+    //   })
+
+    timerId = setInterval(() => {
+      timeLeft--;
+      timeSpan.textContent = timeLeft;
+      if (timeLeft === 0) {
+        clearInterval(timerId);
+        input.setAttribute("disabled", true); // disable the input field
+        //         car.style.marginLeft = container.offsetWidth - car.offsetWidth + "px";
+      }
+    }, 1000);
+
+    //WORDS TYPED PART IS HERE
+    let startTime = null;
+    let wordsTyped = 0;
+
+    // Listen for user input
+    document.addEventListener("input", () => {
+      // Start the timer when the user starts typing
+
+      if (startTime === null) {
+        startTime = Date.now();
+      }
+
+      // Calculate the typing speed
+      const elapsedTime = (Date.now() - startTime) / 1000; // Time in seconds
+      const wpm = Math.round((wordsTyped / elapsedTime) * 60);
+
+      // Update the UI with the current typing speed
+      const typing_speed_shower = document.getElementById(
+        "typing-speed-shower"
+      );
+      typing_speed_shower.innerText = `${wpm} wpm`;
+    });
+
+    // Listen for space key to count the number of words typed
+    document.addEventListener("keydown", (event) => {
+      if (event.code === "Space") {
+        wordsTyped++;
+      }
+    });
+  </script>
+</html>
