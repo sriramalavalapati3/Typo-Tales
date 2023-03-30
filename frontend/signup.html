@@ -13,12 +13,14 @@
 </head>
 <style>
 	body {
-		background-color: #f2f2f2;
+		background-color: rgb(178, 178, 199);
+		
 	}
 
 	#nav {
-		background-color: white;
-		height: 70px;
+		
+		background-color: rgb(131, 131, 156);
+		height: 80px;
 	}
 
 	#rbname {
@@ -26,13 +28,13 @@
 		font-size: xx-large
 	}
 
-	#logo-name {
+	/* #logo-name {
 
 		align-items: center;
 		width: 20%;
 		height: 100%;
 		margin-left: 150px;
-	}
+	} */
 
 	a {
 		text-decoration: none;
@@ -42,12 +44,21 @@
 
 	#logo {
 
-		width: 300px;
-		height: 150px;
-		padding-bottom: 30px;
-		margin-bottom: 20px;
+		width: 100px;
+		height: 80px;
+		padding-bottom: 120px;
+		margin-bottom:30px;
 	}
 
+	#car {
+
+		width: 100px;
+		height: 100px;
+		padding-bottom: 120px;
+		margin-bottom: 20px;
+		margin-left: 100px;
+		margin-top: -20px;
+	}
 
 	#body {
 		display: flex;
@@ -126,7 +137,8 @@
 <body>
 	<div id="nav">
 		<div id="logo-name">
-			<img id="logo" src="../favicon/logo.png" alt="#">
+			<img id="car" src="../frontend/images/gadi.png" alt="#">
+			<img id="logo" src="../frontend/images/tYPO TALES.png" alt="#">
 			<a id="rbname" href="index.html"></a>
 		</div>
 	</div>
@@ -149,17 +161,17 @@
 				<div class="error"></div>
 			</div> <br>
 			<div class="input-control"> Email address <br>
-				<input type="text" autocomplete="off" class="email" required>
+				<input type="email" autocomplete="off" class="email" required>
 				<div class="error"></div>
 			</div>
 
 			<br>
 			<div class="input-control"> Password <br>
-				<input type="text" autocomplete="off" class="password" required>
+				<input type="password" autocomplete="off" class="password" required>
 				<div class="error"></div>
 			</div> <br>
 			<div class="input-control"> Confirm Password <br>
-				<input type="text" autocomplete="off" class="confirm-password" required>
+				<input type="password" autocomplete="off" class="confirm-password" required>
 				<div class="error"></div>
 				<br>
 				<!-- <div class="input-control"> Age <br>
@@ -180,32 +192,33 @@
 </html>
 <script>
 	let btn = document.querySelector("#submit");
-	
 
-	
+
+
 	btn.addEventListener("click", signup)
 
-	
+
 
 	function signup() {
 		let name = document.querySelector(".full-name").value
 		let email = document.querySelector(".email").value
 		// let age = document.querySelector(".age").value
-		let password = document.querySelector(".password").value
-		let c_password = document.querySelector(".confirm-password").value
-		let mobile = document.querySelector(".mobile-number").value
+		let pass = document.querySelector(".password").value
+		let c_pass = document.querySelector(".confirm-password").value
+		let mob = document.querySelector(".mobile-number").value
 
 		let user = {
-			name,  email,  password, c_password, mobile
+			name, email, pass, c_pass, mob
 		}
-		if (name == '' || email == ''|| password == '' || c_password == '' || mobile == '') {
+		if (name == '' || email == '' || pass == '' || c_pass == '') {
 			document.querySelector('.no-input').textContent = 'Fill all the details'
 		}
 		else {
+
 			// document.querySelector('.no-input').textContent = 'SignUp successfull'
 			// fetch("http://localhost:8080/user/register",{
 			// 	method: "POST",
-            //     body: JSON.stringify(user)
+			//     body: JSON.stringify(user)
 			// }).then((res)=>res.json())
 			// .then((data)=>{
 			// 	console.log(data)
@@ -215,21 +228,21 @@
 			// // window.location.href = './login.html'
 
 			fetch('http://localhost:8080/user/register', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(user)
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      document.querySelector('.no-input').textContent = 'Sign up successful';
-    })
-    .catch(error => {
-      console.error(error);
-      document.querySelector('.no-input').textContent = 'An error occurred';
-    })
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(user)
+			})
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					document.querySelector('.no-input').textContent = 'Sign up successful';
+				})
+				.catch(error => {
+					console.error(error);
+					document.querySelector('.no-input').textContent = 'An error occurred';
+				})
 
 		}
 	}

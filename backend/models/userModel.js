@@ -5,8 +5,8 @@ const userSchema= mongoose.Schema({
 	name:{type:String,required:true},
 	email:{type:String,required:true},
     pass:{type:String,required:true},
-	
-	mob:{type:Number,required:true},
+	c_pass :{type:String,required:true},
+    mob:{type:Number},
 	role:{
 		type:String,
 		required:true,

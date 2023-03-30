@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+</head>
+<style>
+    * {
+        font-family: 'Lato', sans-serif;
+    }
+
+    body {
+        background-color: #f2f2f2;
+    }
+
+    #nav {
+        background-color: rgb(178, 178, 199);
+        /* border:2px solid red ; */
+    }
+
+    #rbname {
+        text-decoration: none;
+        font-size: xx-large
+    }
+
+    #logo-name {
+        display: flex;
+        align-items: center;
+        width: 30%;
+        margin-left: 150px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #logo {
+        width: 20%;
+        height: 10%;
+    }
+    #car {
+        width: 20%;
+        height: 10%;
+    }
+
+    #container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3rem;
+        margin: auto;
+    }
+
+    #register {
+        color: white;
+        background-color: black;
+        width: 102%;
+        height: 35px;
+    }
+
+    br+button {
+        color: white;
+        background-color: black;
+        width: 102%;
+        height: 35px;
+    }
+
+    input {
+        width: 100%;
+        height: 30px;
+    }
+
+    #login {
+        background-color: white;
+        padding: 0px 70px 40px 60px;
+        margin-top: 30px;
+        width: 20%;
+    }
+
+    #social-login {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    #social-login>button {
+        background: transparent;
+        width: 200%;
+        border: 0.5px solid rgb(146, 146, 146);
+        height: 40px;
+        color: rgb(133, 133, 133);
+    }
+
+    ion-icon {
+        font-size: 30px;
+        color: blue;
+    }
+
+    .fa-google {
+        background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #signup {
+        background-color: white;
+        padding: 0px 70px 40px 60px;
+        margin-top: 30px;
+        width: 20%;
+    }
+
+    .input-control .error {
+        color: red;
+        font-size: 10px;
+    }
+</style>
+
+<body>
+    <div id="nav">
+        <div id="logo-name">
+            <img id="car" src="../frontend/images/gadi.png" alt="#">
+            <img id="logo" src="../frontend/images/tYPO TALES.png" alt="#">
+            <a id="rbname" href="index.html"></a>
+        </div>
+    </div>
+    <div id="container">
+        <div id="login">
+            <h3>Existings Customers</h3>
+            <div class="input-control"> Email address <br>
+                <input type="text" autocomplete="off" class="email" required>
+                <div class="error"></div>
+            </div> <br>
+            <div class="input-control"> Password <br>
+                <input type="text" autocomplete="off" class="password" required>
+                <div class="error"></div>
+            </div> <br>
+            <u>FORGOT YOUR PASSWORD?</u> <br> <br>
+            <button id='login-btn'>LOGIN TO YOUR ACCOUNT</button>
+            <p>Or, Continue with</p>
+            <div id="social-login">
+                <button>  <ion-icon name="logo-facebook"></ion-icon>
+                    
+                </button>
+                <button> <i class="fab fa-google fa-2x"></i></button>
+            </div>
+        </div>
+        <div id="signup">
+            <h3>New Customers</h3> <br>
+            <button id="register">REGISTER</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let registerBtn = document.querySelector('#register')
+    registerBtn.addEventListener('click', e => {
+        e.preventDefault()
+        window.location.href = "signup.html"
+    })
+
+    let loginBtn = document.querySelector('#login-btn')
+    loginBtn.addEventListener('click', e => {
+        e.preventDefault()
+        login()
+        //window.location.href = './index.html'
+    })
+
+    function login() {
+        let email = document.querySelector('.email')
+        let password = document.querySelector('.password')
+        let emailV = email.value.trim()
+        let passwordV = password.value.trim()
+
+        let user =JSON.parse(localStorage.getItem("userdetails")); 
+        
+        
+
+        if (emailV == "") {
+            setError(email, 'Email is required')
+        }
+        user.forEach((element)=>{
+            if (emailV != element.mail) {
+            setError(email, 'Enter the email that you used to signup')
+        }
+        if (passwordV != element.pswd) {
+            setError(password, 'Wrong Password')
+        }
+        else if (emailV == element.mail && passwordV == element.pswd) {
+            console.log("yaay")
+            alert("Login Success")
+            window.location.assign("index.html");
+        }
+    }
+        )}
+
+    let setError = (e, message) => {
+        let inputControl = e.parentElement
+        let errorDisplay = inputControl.querySelector(".error");
+
+        errorDisplay.innerText = message;
+        inputControl.classList.add("success");
+        inputControl.classList.remove("error");
+    }
+</script>
