@@ -338,13 +338,15 @@ nav {
 
 #gamestarthere {
     width: 100%;
-    /* height: 400px; */
+    height: 680px;
     border: 2px solid #000000;
     background-color: white;
     margin-top: 50px;
     display: none;
+    border-radius: 20px;
 }
-#topmostshowing{
+
+#topmostshowing {
     width: 90%;
     height: 30px;
     margin: auto;
@@ -353,7 +355,8 @@ nav {
     justify-content: space-between;
     margin-top: 10px;
 }
-#waitandjoin{
+
+#waitandjoin {
     width: 100%;
     height: 100%;
     display: flex;
@@ -363,7 +366,8 @@ nav {
     font-weight: 550;
     color: #394F8A;
 }
-#timerstart{
+
+#timerstart {
     width: 100%;
     height: 100%;
     display: flex;
@@ -374,6 +378,7 @@ nav {
     color: #394F8A;
     margin-right: 30px;
 }
+
 .gamecarsstart {
     width: 90%;
     margin: auto;
@@ -382,11 +387,12 @@ nav {
     color: #394F8A;
     border: 2px solid red;
     margin-top: 10px;
+    padding: 20px;
 }
 
-.textshowingstart{
+.textshowingstart {
     width: 90%;
-    height:200px;
+    height: 160px;
     border: 2px solid black;
     margin: auto;
     margin-top: 30px;
@@ -395,23 +401,287 @@ nav {
     background-color: #F6FBFF;
 }
 
-#thattext{
+#thattext {
     font-size: 22px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: justify;
     font-weight: 100;
 }
-input::placeholder{
+
+input::placeholder {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 22px;
 }
+
 #inputfortype input {
     width: 95%;
     margin: auto;
-    padding: 15px;
+    padding: 10px;
     margin-top: 30px;
 }
-input{
+
+input {
     font-size: 22px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#resendbtn {
+    background-color: #e68200;
+    font-size: 20px;
+    font-weight: 550;
+    padding: 20px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+#resendbtn:hover {
+    background-color: #394F8A;
+    color: white;
+    cursor: pointer;
+}
+
+#raceagainbtn {
+    background-color: #219ea9;
+    font-size: 20px;
+    font-weight: 550;
+    padding: 20px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin-left: 50%;
+}
+
+#raceagainbtn:hover {
+    background-color: #136a04;
+    color: white;
+    cursor: pointer;
+}
+
+.afterresend {
+    width: 90%;
+    margin: auto;
+    height: 70px;
+    /* border: 2px solid black; */
+}
+
+#car,
+#car2,
+#car3,
+#car4,
+#car5 {
+    width: 100%;
+    position: relative;
+    left: 0;
+    transition: all 1s ease;
+    /* border-bottom: dotted; */
+}
+
+#car2,
+#car3,
+#car4,
+#car5 {
+    margin-top: 25px;
+}
+
+.correct {
+    color: rgb(0, 255, 0);
+    background-color: white;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+/* ------------------------------------------------------------------ranking bottom------------------------------------------------------------------- */
+
+.bottomrank{
+    width: 95.59%;
+    border: 2px solid black;
+    /* height: 200px; */
+    background-color: #A0AECD;
+    padding: 30px;
+    display: flex;
+}
+
+.bottomleftbig{
+    width: 65%;
+    margin: auto;
+    /* margin-right: 450px; */
+    background-color: white;
+    border-radius: 20px;
+    height: 100%;
+}
+
+
+.topbuttonsbot{
+    padding:20px;
+
+}
+#btn1bottom{
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #394F8A;
+    color: white;
+}
+
+#btn2bottom,#btn3bottom,#btn4bottom{
+    font-size: 16px;
+    padding: 10px;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: none;
+    background-color: #394F8A;
+    color: white;
+}
+.fa-sharp , .fa-user, .fa-thumbs-up, .fa-wand-magic-sparkles{
+    margin-right: 7px;
+}
+
+.rankingboard{
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    /* border: 2px solid black; */
+    height: 300px;
+}
+.topnamespeed{
+    background-color: #394F8A;
+    height: 33px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    
+}
+.topnamespeed div {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.no1cat{
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+   
+
+}
+.no1cat div {
+    margin-left:20px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    color: #394F8A;
+    margin-right: 10px;
+}
+#specialno1cat{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #A0AECD;
+}
+
+#backcnage1,#backcnage2{
+    background-color: #A0AECD;
+}
+
+.bottomrightbig{
+    width: 20%;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    height: 700px;
+}
+.bottomrightbig img {
+    width: 100%;
+    height: 100%;
+}
+.onlyimghereguys{
+    width: 97%;
+    padding: 15px;
+}
+.onlyimghereguys a img{
+    width: 100%;
+    border-radius: 10px;
+    /* height: 100%; */
+}
+
+
+/* ---------------------------footer------------------------ */
+
+
+footer {
+    background-color: #394F8A;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer form .form-control {
+    width: 200px;
+}
+
+footer .list-inline li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer .fab {
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .fab:hover {
+    transform: scale(1.2);
+}
+
+footer button.btn-primary {
+    background-color: #2b93ee;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+footer button.btn-primary:hover {
+    background-color: #136a04;
+    color: #ffffff;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+.form-control::placeholder{
+    padding: 10px;
+    font-size: 16px;
 }
