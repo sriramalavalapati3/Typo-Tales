@@ -1,13 +1,15 @@
 const express=require("express");
 const app=express();
 const socketio=require("socket.io");
-const mongoose=require("mongoose");
+const{connection}= require("./db")
 var randomId = require('random-id');
 const {userRouter}=require("./routes/userRoutes.js")
 var cors = require('cors')
 app.use(cors())
+app.use(express.json())
  const {User}=require("./user")
  app.use("/user",userRouter)
+ app.use(express.json())
 // length of the id (default is 30)
 var len = 10;
 // pattern to determin how the id will be generated
@@ -15,8 +17,9 @@ var len = 10;
 var pattern = 'aA0'
  
 
-const expressServer=app.listen(8080,()=>{
+const expressServer=app.listen(8080,async()=>{
     try {
+        await connection
         console.log("server running")
     } catch (error) {
         console.log(error.message)

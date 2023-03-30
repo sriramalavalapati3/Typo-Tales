@@ -2,20 +2,21 @@ const express = require('express');
 const jwt =require("jsonwebtoken")
 const bcrypt= require("bcrypt")
 const {authentication}= require("../middlewares/authentication")
-const {UserModel}=require("./model/userModel")
+const {UserModel}=require("../models/userModel")
 const userRouter= express.Router()
 
 userRouter.post("/register",async(req,res)=>{
-	const {name,email,pass,age,mob,role}= req.body;
+	const {name,email,pass,mob,role}= req.body;
 	const check= await UserModel.findOne({email})
 	if(check){
-		res.send({"msg":"User Already Register Please Login"})
+	return	res.send({"msg":"User Already Register Please Login"})
+		
 	}else{
 		try{
 			bcrypt.hash(pass, 5,async(err, hash)=> {
 				 if(err) res.send(err)
 				 else{
-					const user=new UserModel({name,email,pass:hash,age,mob,role})
+					const user=new UserModel({name,email,pass:hash,c_pass:hash,mob,role})
 				await  user.save()
 					res.send(user)
 				 }
