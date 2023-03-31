@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet Practise</title>
+    <style></style>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>My WhatsApp</h1>
-
+    <div class="roomenter">
+      <label for="room">join this room</label>
+      <p id="roomnumber"></p>
+      <input type="text" id="roomvalue" placeholder="enter room id" />
+      <button id="entertheroom">Enter</button>
+    </div>
     <h2>Please type this text</h2>
     <div id="para-place"></div>
     <input type="text" id="input-field" />
@@ -23,13 +29,41 @@
     ></script>
 
     <script>
-      const socket = io("http://localhost:4000", {
+      const socket = io("http://localhost:8080", {
         transports: ["websocket"],
       });
-      socket.on("hello", (data) => {
-        console.log(data);
+
+      //=============================================================================================================>
+      let roomnumber = document.querySelector("#roomnumber");
+      let joinbutton = document.querySelector("#entertheroom");
+      let room = document.querySelector(".roomenter");
+      joinbutton.addEventListener("click", Join);
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const username = urlParams.get("nickname");
+      let roomvalue = urlParams.get("roomvalue");
+      let value = urlParams.get("value");
+
+      console.log(username);
+
+      if (value == 0) {
+        room.style.display = "block";
+        socket.emit("username", { username });
+        socket.on("roomno", (id) => {
+          roomnumber.innerText = id;
+        });
+      } else if (value == 1) {
+        socket.emit("joinroom", { username, roomvalue });
+      }
+      function Join() {
+        let roomvalue = document.querySelector("#roomvalue").value;
+        socket.emit("joinroom", { username, roomvalue });
+      }
+      socket.on("message", (message) => {
+        console.log(message);
       });
 
+      //============================================================================================>
       //recieving paragraph from server
       let myGlobalPara;
       socket.on("thePara", (para) => {
@@ -83,17 +117,19 @@
         ({ socketID, isTyping, typedText, flag, wordCount, totalWords }) => {
           console.log(typedText, flag);
           const car_img = document.getElementById(`${socketID}`);
-          console.log(car_img);
           if (isTyping) {
             const speed = (+wordCount / wordsPerMinute) * carSpeed;
-            car_img.style.animationDuration = `${speed}ms`;
-            console.log(wordCount);
-            console.log(speed);
+            // car_img.style.animationDuration = `${speed}ms`;
           } else {
-            img.style.animationDuration = "0s";
+            // car_img.style.animationDuration = "0s";
           }
         }
       );
+
+      //getting the user data here
+      socket.on("user_data", (data) => {
+        console.log(data);
+      });
     </script>
   </body>
 </html>

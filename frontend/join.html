@@ -1,75 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .choice {
-            display: block;
-        }
+      .choice {
+        display: block;
+      }
 
-        .create {
-            display: none
-        }
-        .join {
-            display: none
-        }
-       
+      .create {
+        display: none;
+      }
+      .join {
+        display: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="choice">
-        <h1>Create or join the game</h1>
-        <button id="create">create</button>
-        <button id="join">join</button>
+      <h1>Create or join the game</h1>
+      <button id="create">create</button>
+      <button id="join">join</button>
     </div>
     <div class="create">
-        <form action="display.html">
-            <input type="text"  name="nickname" placeholder="enter ur nickname">
-            <input type="text" name="value" value="0" style="display: none;">
-            <button id="createbutton" type="submit">create</button>
-        </form>
-        
-       
+      <form action="display.html">
+        <input type="text" name="nickname" placeholder="enter ur nickname" />
+        <input type="text" name="value" value="0" style="display: none" />
+        <button id="createbutton" type="submit">create</button>
+      </form>
     </div>
     <div class="join">
-        <form action="display.html">
-            <input type="text" placeholder="enter nickname" name="nickname">
-            <input type="text" placeholder="enter ur gameid" name="roomvalue">
-            <input type="text" name="value" value="1" style="display: none;">
-            <button id="createbutton">join</button>
-        </form>
-       
-       
-        
+      <form action="display.html">
+        <input type="text" placeholder="enter nickname" name="nickname" />
+        <input type="text" placeholder="enter ur gameid" name="roomvalue" />
+        <input type="text" name="value" value="1" style="display: none" />
+        <button id="createbutton">join</button>
+      </form>
     </div>
-
-</body>
-
+  </body>
 </html>
 
-
 <script>
-    let create = document.querySelector("#create")
-    create.addEventListener("click", createfun)
+  let create = document.querySelector("#create");
+  create.addEventListener("click", createfun);
 
-    function createfun() {
-        document.querySelector(".create").style.display="block"
-        document.querySelector(".join").style.display="none"
-        document.querySelector(".choice").style.display = "none"
-    }
-    let join = document.querySelector("#join")
-    join.addEventListener("click", joinfun)
+  function createfun() {
+    document.querySelector(".create").style.display = "block";
+    document.querySelector(".join").style.display = "none";
+    document.querySelector(".choice").style.display = "none";
+  }
+  let join = document.querySelector("#join");
+  join.addEventListener("click", joinfun);
 
-    function joinfun() {
-        document.querySelector(".create").style.display="none"
-        document.querySelector(".join").style.display="block"
-        document.querySelector(".choice").style.display = "none"
-    }
-
-
+  function joinfun() {
+    document.querySelector(".create").style.display = "none";
+    document.querySelector(".join").style.display = "block";
+    document.querySelector(".choice").style.display = "none";
+  }
 </script>
