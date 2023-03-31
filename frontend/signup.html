@@ -14,11 +14,11 @@
 <style>
 	body {
 		background-color: rgb(178, 178, 199);
-		
+
 	}
 
 	#nav {
-		
+
 		background-color: rgb(131, 131, 156);
 		height: 80px;
 	}
@@ -47,7 +47,7 @@
 		width: 100px;
 		height: 80px;
 		padding-bottom: 120px;
-		margin-bottom:30px;
+		margin-bottom: 30px;
 	}
 
 	#car {
@@ -214,18 +214,11 @@
 			document.querySelector('.no-input').textContent = 'Fill all the details'
 		}
 		else {
-
-			// document.querySelector('.no-input').textContent = 'SignUp successfull'
-			// fetch("http://localhost:8080/user/register",{
-			// 	method: "POST",
-			//     body: JSON.stringify(user)
-			// }).then((res)=>res.json())
-			// .then((data)=>{
-			// 	console.log(data)
-			// })
-			// .catch((err)=>alert(err))
-
-			// // window.location.href = './login.html'
+			function isValidEmail(email) {
+				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				return emailRegex.test(email);
+			}
+			
 
 			fetch('http://localhost:8080/user/register', {
 				method: 'POST',
@@ -238,6 +231,7 @@
 				.then(data => {
 					console.log(data);
 					document.querySelector('.no-input').textContent = 'Sign up successful';
+					window.location.href = './login.html'
 				})
 				.catch(error => {
 					console.error(error);
