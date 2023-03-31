@@ -1,28 +1,22 @@
 const users = [];
 
 function User(id, username, roomvalue) {
-  const user = { id, username, roomvalue, userSet: new Set() };
+  const user = { id, username, roomvalue };
   users.push(user);
   console.log(users);
   return user;
 }
 
-function update_word_function(socketID, typedText) {
-  let one_user = users.filter((el, ind) => {
-    if (el.id == socketID) {
-      if (!el.userSet.has(typedText)) {
-        el.userSet.add(typedText);
-        el.wordCount = el.userSet.size;
-      }
-      return el;
+function user_details(id, totalWordsCount) {
+  let i = 0;
+  const filtered_user = users.filter((element, index) => {
+    if (element.id == id) {
+      i = index;
+      return element;
     }
   });
-
-  // console.log(one_user);
-  // console.log(users);
-  return one_user;
+  filtered_user[0].wordCount = totalWordsCount;
+  users[i] = filtered_user[0];
 }
 
-// console.log(one_user);
-
-module.exports = { User, update_word_function };
+module.exports = { User, user_details };
