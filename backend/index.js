@@ -4,9 +4,11 @@ const socketio=require("socket.io");
 const{connection}= require("./db")
 var randomId = require('random-id');
 const {userRouter}=require("./routes/userRoutes.js")
+const passport=require("./middlewares/google_oauth")
 var cors = require('cors')
 app.use(cors())
 app.use(express.json())
+
  const {User}=require("./user")
  app.use("/user",userRouter)
  app.use(express.json())
@@ -16,6 +18,21 @@ var len = 10;
 // default is aA0 it has a chance for lowercased capitals and numbers
 var pattern = 'aA0'
  
+// ------------------google oauth-----------
+
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile',"email"] }));
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/user/login' },{session:false}),
+  function(req, res) {
+       console.log(req.user)
+    res.redirect('/');
+  });
+
+app.get("/",(req,res)=>{
+    res.send("This is My Home page")
+})
 
 const expressServer=app.listen(8080,async()=>{
     try {
