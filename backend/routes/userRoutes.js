@@ -1,13 +1,15 @@
 const express = require('express');
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
+
+
 const { authentication } = require("../middlewares/authentication")
 const { UserModel } = require("../models/userModel")
 const { client } = require("../redis/redis")
 const userRouter = express.Router()
 require('dotenv').config()
 
-userRouter.post("/register", async (req, res) => {
+userRouter.post("/register",async (req, res) => {
 	const { name, email, pass, mob, role } = req.body;
 	const check = await UserModel.findOne({ email })
 	if (check) {
@@ -44,9 +46,9 @@ userRouter.post("/login", async (req, res) => {
 		console.log(user)
 		if (user) {
 			bcrypt.compare(pass, user[0].pass, function (err, result) {
-				console.log(process.env.jwtnormalToken)
+				
 				if (result) {
-					console.log(process.env.jwtnormalToken)
+					
 					var normal_token = jwt.sign({ userID: user[0]._id }, process.env.jwtnormalToken, { expiresIn: '1hr' })
 					var refresh_token = jwt.sign({ userID: user[0]._id }, process.env.jwtrefreshToken, { expiresIn: '7d' })
 

@@ -214,13 +214,13 @@
 			document.querySelector('.no-input').textContent = 'Fill all the details'
 		}
 		else {
-			function isValidEmail(email) {
-				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-				return emailRegex.test(email);
-			}
+			// function isValidEmail(email) {
+			// 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			// 	return emailRegex.test(email);
+			// }
 			
 
-			fetch('http://localhost:8080/user/register', {
+			fetch('http://localhost:4000/user/register', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'

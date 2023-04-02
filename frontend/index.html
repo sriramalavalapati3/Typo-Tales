@@ -31,11 +31,11 @@
                 <p>Guest</p>
             </div>
             <div class="lowerpart">
-                <a href=""><button class="createAc">CREATE ACCOUNT</button></a>
-                <a href=""><button class="signin1">SIGN IN</button></a>
+                <a href="signup.html"><button class="createAc">CREATE ACCOUNT</button></a>
+                <a href="login.html"><button class="signin1">SIGN IN</button></a>
                 <a href=""><button id="infomaster1">0 WPM</button></a>
                 <a href=""><button id="infomaster2">0 Races</button></a>
-                <a href=""><button id="logout">Logout</button></a>
+                <a href=""><button id="logout" onclick="logout()">Logout</button></a>
 
             </div>
         </div>
@@ -146,4 +146,19 @@
         datahereall.style.display = "none";
         gamestarthere.style.display = "block";
     });
+
+    function logout(){
+        fetch('http://localhost:4000/user/logout')
+				
+				.then(data => {
+					console.log("logout");
+					alert("logout successfull")
+                    window.location.assign("index.html");
+				})
+				.catch(error => {
+					console.error(error);
+					
+				})
+     
+    }
 </script>

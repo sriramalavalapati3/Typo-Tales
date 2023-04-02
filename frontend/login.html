@@ -173,36 +173,39 @@
     loginBtn.addEventListener('click', e => {
         e.preventDefault()
         login()
-        //window.location.href = './index.html'
+       
     })
 
+
+    
     function login() {
-        let email = document.querySelector('.email')
-        let password = document.querySelector('.password')
-        let emailV = email.value.trim()
-        let passwordV = password.value.trim()
-
-        let user =JSON.parse(localStorage.getItem("userdetails")); 
         
-        
+       user={
+        email :document.querySelector('.email').value,
+         pass: document.querySelector('.password').value
 
-        if (emailV == "") {
-            setError(email, 'Email is required')
-        }
-        user.forEach((element)=>{
-            if (emailV != element.mail) {
-            setError(email, 'Enter the email that you used to signup')
-        }
-        if (passwordV != element.pswd) {
-            setError(password, 'Wrong Password')
-        }
-        else if (emailV == element.mail && passwordV == element.pswd) {
-            console.log("yaay")
-            alert("Login Success")
-            window.location.assign("index.html");
-        }
-    }
-        )}
+       }
+       fetch('http://localhost:4000/user/login', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(user)
+			})
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					alert("Login successfull")
+                    window.location.assign("index.html");
+				})
+				.catch(error => {
+					console.error(error);
+					document.querySelector('.no-input').textContent = 'An error occurred';
+				})
+
+       }
+   
+
 
     let setError = (e, message) => {
         let inputControl = e.parentElement

@@ -1,9 +1,22 @@
 const express = require("express");
 const { Server } = require("socket.io");
 
+const{connection}= require("../db")
+// var randomId = require('random-id');
+const {userRouter}=require("../routes/userRoutes")
+const passport=require("passport")
+
 const http = require("http");
 const { type } = require("os");
+const cors= require("cors");
+const {User}=require("../user")
+
 const app = express();
+app.use(cors())
+app.use(express.json())
+
+ app.use("/user",userRouter)
+
 const httpServer = http.createServer(app);
 const io = new Server(httpServer);
 app.get("/", (req, res) => {
@@ -112,6 +125,26 @@ const includeFunction = (myParagraph, typedText) => {
 console.log(mySet);
 mySet = new Set();
 
-httpServer.listen(4000, () => {
-  console.log("Server is running on port 4000");
+// ------------------google oauth-----------
+
+// app.get('/auth/google',
+//   passport.authenticate('google', { scope: ['profile',"email"] }));
+
+// app.get('/auth/google/callback', 
+//   passport.authenticate('google', { failureRedirect: '/login' },{session:false}),
+//   function(req, res) {
+//       //  console.log(req.user)
+//     res.redirect('/');
+//   });
+
+
+
+
+httpServer.listen(4000, async() => {
+  try{
+    await connection
+    console.log("server is running at port 4000")
+  }catch(err){
+    console.log(err)
+  }
 });
