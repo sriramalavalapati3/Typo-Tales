@@ -15,7 +15,7 @@ Clone the repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/yourusername/typo-tales.git
+git clone 
 Install dependencies:
 
 bash
@@ -28,7 +28,7 @@ Create a .env file in the root directory of the project and set the following va
 
 makefile
 Copy code
-PORT=3000
+PORT=8080
 SESSION_SECRET=your_session_secret
 Start the server:
 
@@ -40,25 +40,13 @@ Open the app in your browser:
 arduino
 Copy code
 http://localhost:3000
-Technologies Used
-Node.js
-Express
-MongoDB
-Socket.io
-Bootstrap
-Contributors
-John Doe
-Jane Smith
-Bob Johnson
-Sarah Lee
-David Kim
 
 
 
 Feel n only feel
 yes finish the work
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
 
 Contributing
 We welcome contributions from the community! If you would like to contribute to this project, please fork the repository and create a pull request.
@@ -72,3 +60,7 @@ We would like to thank the creators of typeracer.com for providing the inspirati
 Special thanks to our mentors who provided guidance and support throughout the development process.
 
 Lastly, we would like to thank the open-source community for creating and maintaining the tools and libraries that made this project possible.
+
+
+Tech stack we used:
+HTML |CSS |JAVASCRIPT|NODEJS|SOCKET.IO|MONGODB |REDIS
