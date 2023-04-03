@@ -25,20 +25,8 @@ bash
 Copy code
 git clone 
 Install dependencies:
+run ther server
 
-bash
-Copy code
-cd typo-tales
-npm install
-Set up environment variables:
-
-Create a .env file in the root directory of the project and set the following variables:
-
-makefile
-Copy code
-PORT=8080
-SESSION_SECRET=your_session_secret
-Start the server:
 
 mongodb
 Copy code
