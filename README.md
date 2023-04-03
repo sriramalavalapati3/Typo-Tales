@@ -28,17 +28,6 @@ Install dependencies:
 run ther server
 
 
-mongodb
-Copy code
-npm start
-Open the app in your browser:
-
-
-Feel n only feel
-yes finish the work
-License
-
-
 Contributing
 We welcome contributions from the community! If you would like to contribute to this project, please fork the repository and create a pull request.
 
