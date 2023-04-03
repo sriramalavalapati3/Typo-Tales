@@ -64,6 +64,17 @@ Lastly, we would like to thank the open-source community for creating and mainta
 Tech stack we used:
 HTML |CSS | JAVASCRIPT | NODEJS | SOCKET.IO | MONGODB | REDIS | EXPRESS
 
+NPM MODULES 
+
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22",
+    "random-id": "^1.0.4",
+    "server": "^1.0.38",
+    "socket.io": "^4.6.1",
+     "dotenv": "^16.0.3",
+     REDIS
+
 ![Alt Text](https://drive.google.com/uc?id=1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7)
 
 //
