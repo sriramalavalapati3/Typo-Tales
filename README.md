@@ -32,15 +32,10 @@ PORT=8080
 SESSION_SECRET=your_session_secret
 Start the server:
 
-sql
+mongodb
 Copy code
 npm start
 Open the app in your browser:
-
-arduino
-Copy code
-http://localhost:8080
-
 
 
 Feel n only feel
