@@ -64,5 +64,6 @@ Lastly, we would like to thank the open-source community for creating and mainta
 
 Tech stack we used:
 HTML |CSS |JAVASCRIPT|NODEJS|SOCKET.IO|MONGODB |REDIS
+https://drive.google.com/file/d/1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7/view?usp=share_link
 
-<img src="https://drive.google.com/file/d/1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7/view?usp=share_link"></img>
+<img src="https://drive.google.com/file/d/1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7/view?usp=share_link">
