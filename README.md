@@ -66,5 +66,6 @@ Tech stack we used:
 HTML |CSS |JAVASCRIPT|NODEJS|SOCKET.IO|MONGODB |REDIS
 
 
-![https://drive.google.com/file/d/1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7/view?usp=share_link](image_url)
+![alt text](https://drive.google.com/file/d/1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7/view?usp=share_link)
+
 
