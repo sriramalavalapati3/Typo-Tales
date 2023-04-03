@@ -1,7 +1,7 @@
 # fabulous-vest-203
 
 Typo Tales
-Typo Tales is a typing platform that allows users to take part in typing by creating groups with their friends and also practice alone. This project is a clone of typeracer.com and was built within 6 days by a team of 6 members.
+Typo Tales is a typing platform that allows users to take part in typing by creating groups with their friends and also practice alone. This project is a clone of typeracer.com and was built within 5 days by a team of 4 members.
 
 Features
 Create groups with friends and compete against each other in real-time typing races
@@ -39,7 +39,7 @@ Open the app in your browser:
 
 arduino
 Copy code
-http://localhost:3000
+http://localhost:8080
 
 
 
