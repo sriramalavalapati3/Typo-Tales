@@ -5,15 +5,19 @@
 
 
 Typo Tales
+
 Typo Tales is a typing platform that allows users to take part in typing by creating groups with their friends and also practice alone. This project is a clone of TypoTales.com and was built within 5 days by a team of 4 members.
 
 Features
+
 Create groups with friends and compete against each other in real-time typing races
 Practice typing alone with various typing exercises and improve your typing skills
 View real-time progress of other users in your group during races
 Leaderboards to view top performers in races and exercises
 Authentication system to manage user accounts and sessions
 Responsive design for optimal user experience on all devices
+
+
 Installation
 Clone the repository to your local machine:
 
