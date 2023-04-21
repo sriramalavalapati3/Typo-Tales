@@ -1,0 +1,128 @@
+.mid {
+    width: 90%;
+    margin:auto;
+    /* border: 2px solid black; */
+    height: 600px;
+    margin-top: 50px;
+    display: flex;
+    background-color: #f2f2f2;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .mid {
+        width: 100%;
+        margin: auto;
+        /* border: 2px solid black; */
+        /* height: 600px; */
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        background-color: #f2f2f2;
+        margin-bottom: 50px;
+    }
+    nav{
+        display: none;
+    }
+    .sometext2 {
+        /* border: 2px solid red; */
+        height: 700px;
+        background-color: #cb4343;
+        width: 100%;
+        color: white;
+        border-radius: 30px;
+        margin-top: 130px;
+        margin-left: 25%;
+    }
+}
+
+.sometext{
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    height: 500px;
+    font-size: 20px;
+    text-align: center;
+    /* border: 2px solid rgb(255, 12, 12); */
+}
+.headabout{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #ececec;
+}
+.headabout2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #ca1616;
+}
+.paraabout{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #394F8A;
+    text-align: justify;
+}
+#imageabout{
+    width: 29%;
+    margin: auto;
+    /* border: 2px solid rgb(255, 12, 12); */
+    margin-bottom: 30px;
+}
+.membersall{
+    width: 90%;
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    /* border: 2px solid black; */
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nameabout1{
+    width: 30%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 2px solid black; */
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+
+}
+.someallabout {
+    width:100px;
+    height:100px;
+    border-radius: 700px;
+}
+.buttonaboutgl {
+    padding: 5px;
+    background-color: #ff9d00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.buttonaboutg2{
+    padding: 5px;
+    background-color: #11f4dd;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.sometext2 {
+    /* border: 2px solid red; */
+    height: 700px;
+    background-color: #394F8A;
+    width: 50%;
+    color: white;
+    border-radius: 30px;
+}

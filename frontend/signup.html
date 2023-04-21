@@ -2,242 +2,179 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Your Details</title>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./signup.css">
 </head>
-<style>
-	body {
-		background-color: rgb(178, 178, 199);
-
-	}
-
-	#nav {
-
-		background-color: rgb(131, 131, 156);
-		height: 80px;
-	}
-
-	#rbname {
-		text-decoration: none;
-		font-size: xx-large
-	}
-
-	/* #logo-name {
-
-		align-items: center;
-		width: 20%;
-		height: 100%;
-		margin-left: 150px;
-	} */
-
-	a {
-		text-decoration: none;
-		color: black;
-		font-family: 'Lato', sans-serif;
-	}
-
-	#logo {
-
-		width: 100px;
-		height: 80px;
-		padding-bottom: 120px;
-		margin-bottom: 30px;
-	}
-
-	#car {
-
-		width: 100px;
-		height: 100px;
-		padding-bottom: 120px;
-		margin-bottom: 20px;
-		margin-left: 100px;
-		margin-top: -20px;
-	}
-
-	#body {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: auto;
-		width: auto;
-		font-family: 'Lato', sans-serif;
-	}
-
-	#container {
-		background-color: white;
-		padding: 0px 70px 40px 60px;
-		margin-top: 30px;
-		width: 25%;
-	}
-
-	#container p {
-		color: gray;
-	}
-
-	#social-signup {
-		/* width: 200%; */
-		display: flex;
-		justify-content: space-between;
-		gap: 2rem;
-	}
-
-	#social-signup>button {
-		background: transparent;
-		width: 200%;
-		border: 0.5px solid rgb(146, 146, 146);
-		height: 40px;
-		color: rgb(133, 133, 133);
-	}
-
-	input {
-		width: 100%;
-		height: 30px;
-	}
-
-	#submit {
-		color: white;
-		background-color: black;
-		width: 102%;
-		height: 35px;
-	}
-
-	ion-icon {
-		font-size: 30px;
-		color: blue;
-	}
-
-	.fa-google {
-		background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		-webkit-text-fill-color: transparent;
-	}
-
-	.input-control span {
-		color: gray;
-	}
-
-	.input-control .error {
-		color: red;
-		font-size: 10px;
-	}
-
-	#container .no-input {
-		color: red;
-	}
-</style>
 
 <body>
-	<div id="nav">
-		<div id="logo-name">
-			<img id="car" src="../frontend/images/gadi.png" alt="#">
-			<img id="logo" src="../frontend/images/tYPO TALES.png" alt="#">
-			<a id="rbname" href="index.html"></a>
-		</div>
-	</div>
-	<div id="body">
-		<div id="container">
-			<h2>About You</h2>
-			<p>Sign Up With</p>
-			<div id="social-signup">
-				<button> <a href="../html/login.html"><i class="fab fa-google fa-2x"></i></a>
 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="./login.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
 
+    <body>
 
-				</button>
+        <nav>
+            <div class="main_img">
+                <div class="gadi1"> <img src="./images/gadi.png" alt=""></div>
+                <div class="logo1"><img src="./images/tYPO TALES.png" alt=""></div>
+            </div>
+            <div class="nav-items">
+                <a href="#">Pit Stop</a>
+                <a href="#">Updates</a>
+                <a href="#">Discord</a>
+                <a href="./about.html">About</a>
+                <a href="#">Merch</a>
+                <div></div>
+            </div>
+            <div class="rdnav">
+                <div class="upperpart">
+                    <p>Guest</p>
+                </div>
+                <div class="lowerpart">
+                    <a href=""><button class="createAc">Vishal</button></a>
+                    <a href=""><button class="signin1">Ex-c</button></a>
+                    <a href=""><button id="infomaster1">30 WPM</button></a>
+                    <a href=""><button id="infomaster2">10 Races</button></a>
+                    <a href="./login.html"><button id="logout">Logout</button></a>
 
-			</div>
-			<p>Or create an email account </p>
-			<p class="no-input"></p>
-			<div class="input-control"> Full Name <br>
-				<input type="text" autocomplete="off" class="full-name" required>
-				<div class="error"></div>
-			</div> <br>
-			<div class="input-control"> Email address <br>
-				<input type="email" autocomplete="off" class="email" required>
-				<div class="error"></div>
-			</div>
+                </div>
+            </div>
+        </nav><br>
 
-			<br>
-			<div class="input-control"> Password <br>
-				<input type="password" autocomplete="off" class="password" required>
-				<div class="error"></div>
-			</div> <br>
-			<div class="input-control"> Confirm Password <br>
-				<input type="password" autocomplete="off" class="confirm-password" required>
-				<div class="error"></div>
-				<br>
-				<!-- <div class="input-control"> Age <br>
-					<input type="text" autocomplete="off" class="age" required>
-					<div class="error"></div>
-				</div> -->
-			</div> <br>
-			<div class="input-control"> Cell Phone Number <span>(Optional)</span><br>
-				<input type="text" autocomplete="off" class="mobile-number" required>
-				<div class="error"></div>
-			</div>
-			<br>
-			<button id="submit">CONTINUE</button>
-		</div>
-	</div>
-</body>
+        <div class="mainlogin">
+
+            <div class="container">
+                <div class="card">
+                    <a class="singup">Sign Up</a>
+                    <div class="inputBox1">
+                        <input id="email" type="text" required="required">
+                        <span class="user">Email</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input id="username" type="text" required="required">
+                        <span>Username</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input id="password" type="password" required="required">
+                        <span>Password</span>
+                    </div>
+
+                    <button id="enter" class="enter">Enter</button>
+                    <a class="anchorlogin" href="./login.html">Don't have account ? <span class="clickhere">click
+                            here</span></a>
+
+                </div>
+            </div>
+
+            <div class="imagelogin">
+                <div class="card2">
+                    <div class="herediv1">
+                        <img src="./images/gadi.png" alt="">
+                    </div>
+                    <div class="herediv2">
+                        <img src="./images/tYPO TALES 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module" id="cart-module">
+            <span>Proceed To Checkout</span>
+            <span class="module-close" onclick="closeModule()">&times;</span>
+        </div>
+
+    </body>
 
 </html>
+
 <script>
-	let btn = document.querySelector("#submit");
 
 
+    let enter = document.getElementById("enter");
+    let email = document.getElementById("email")
+    let username = document.getElementById("username")
+    let password = document.getElementById("password")
 
-	btn.addEventListener("click", signup)
+    enter.addEventListener("click", async () => {
+
+        if (email.value == "" || username.value == "" || password.value == "") {
+            const module = document.getElementById('cart-module');
+            module.innerText = "Please Fill All The Fields !"
+            module.style.display = 'block';
+            module.style.borderRadius = '20px';
+            module.style.backgroundColor = '#FF9100'
+
+            if ('speechSynthesis' in window) {
+                const message = new SpeechSynthesisUtterance('Please Fill All The Fields !');
+                const femaleVoices = speechSynthesis.getVoices().filter(voice => voice.name.includes('female'));
+                if (femaleVoices.length > 0) {
+                    message.voice = femaleVoices[0];
+                }
+                speechSynthesis.speak(message);
+            }
 
 
+            setTimeout(() => {
+                window.location.reload()
+            }, 3000);
 
-	function signup() {
-		let name = document.querySelector(".full-name").value
-		let email = document.querySelector(".email").value
-		// let age = document.querySelector(".age").value
-		let pass = document.querySelector(".password").value
-		let c_pass = document.querySelector(".confirm-password").value
-		let mob = document.querySelector(".mobile-number").value
+            return
+        }
 
-		let user = {
-			name, email, pass, c_pass, mob
-		}
-		if (name == '' || email == '' || pass == '' || c_pass == '') {
-			document.querySelector('.no-input').textContent = 'Fill all the details'
-		}
-		else {
-			function isValidEmail(email) {
-				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-				return emailRegex.test(email);
-			}
-			
+        let payload = {
+            email: email.value,
+            username: username.value,
+            password: password.value
+        }
 
-			fetch('http://localhost:8080/user/register', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(user)
-			})
-				.then(response => response.json())
-				.then(data => {
-					console.log(data);
-					document.querySelector('.no-input').textContent = 'Sign up successful';
-					window.location.href = './login.html'
-				})
-				.catch(error => {
-					console.error(error);
-					document.querySelector('.no-input').textContent = 'An error occurred';
-				})
+        console.log(payload)
 
-		}
-	}
+        let s = await fetch("http://localhost:8080/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        })
+        let res = await s.json()
+        console.log(res)
+
+        if (res.msg == "Register Sucessfull") {
+
+
+            const module = document.getElementById('cart-module');
+            module.innerText = "Register Sucessfully !"
+            module.style.display = 'block';
+            module.style.borderRadius = '20px';
+            module.style.backgroundColor = 'green'
+
+            if ('speechSynthesis' in window) {
+                const message = new SpeechSynthesisUtterance('Register Sucessfully !');
+                const femaleVoices = speechSynthesis.getVoices().filter(voice => voice.name.includes('female'));
+                if (femaleVoices.length > 0) {
+                    message.voice = femaleVoices[0];
+                }
+                speechSynthesis.speak(message);
+            }
+
+
+            setTimeout(() => {
+                window.location.href = "./login.html"
+            }, 2000);
+        }
+
+    })
+
+
 </script>

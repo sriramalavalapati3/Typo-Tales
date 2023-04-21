@@ -1,0 +1,414 @@
+.login {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  padding: 0px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 300px;
+  flex-direction: column;
+  gap: 35px;
+  background: #e3e3e3;
+  /* box-shadow: 16px 16px 32px #c8c8c8,
+        -16px -16px 32px #fefefe; */
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.inputBox {
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #000;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}
+
+.enter:hover {
+  background-color: #394F8A;
+  color: white;
+  border: none;
+}
+
+
+.mainlogin {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  border: 2px solid black;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #394F8A;
+}
+
+.container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  /* border: 2px solid black; */
+}
+
+.imagelogin {
+  width: 40%;
+  height: 300px;
+  /* border: 2px solid black; */
+  margin: auto;
+  display: flex;
+  padding: 30px;
+  background-color: #c8c8c8;
+  border-radius: 20px;
+}
+
+.card2 {
+  width: 100%;
+  display: flex;
+}
+
+.herediv1 {
+  width: 40%;
+  margin: auto;
+}
+
+.herediv2 {
+  width: 40%;
+  margin: auto;
+}
+
+.herediv1 img,
+.herediv2 img {
+  width: 100%;
+}
+
+
+.lowerpart {
+  display: none;
+}
+
+.anchorlogin {
+  color: black;
+}
+
+.clickhere {
+  color: blue;
+
+}
+
+
+.typewriter {
+  --blue: #5C86FF;
+  --blue-dark: #275EFE;
+  --key: #fff;
+  --paper: #EEF0FD;
+  --text: #D3D4EC;
+  --tool: #FBC56C;
+  --duration: 3s;
+  position: relative;
+  -webkit-animation: bounce05 var(--duration) linear infinite;
+  animation: bounce05 var(--duration) linear infinite;
+}
+
+.typewriter .slide {
+  width: 92px;
+  height: 20px;
+  border-radius: 3px;
+  margin-left: 14px;
+  transform: translateX(14px);
+  background: linear-gradient(var(--blue), var(--blue-dark));
+  -webkit-animation: slide05 var(--duration) ease infinite;
+  animation: slide05 var(--duration) ease infinite;
+}
+
+.typewriter .slide:before, .typewriter .slide:after,
+.typewriter .slide i:before {
+  content: "";
+  position: absolute;
+  background: var(--tool);
+}
+
+.typewriter .slide:before {
+  width: 2px;
+  height: 8px;
+  top: 6px;
+  left: 100%;
+}
+
+.typewriter .slide:after {
+  left: 94px;
+  top: 3px;
+  height: 14px;
+  width: 6px;
+  border-radius: 3px;
+}
+
+.typewriter .slide i {
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 6px;
+  height: 4px;
+  top: 4px;
+  background: var(--tool);
+}
+
+.typewriter .slide i:before {
+  right: 100%;
+  top: -2px;
+  width: 4px;
+  border-radius: 2px;
+  height: 14px;
+}
+
+.typewriter .paper {
+  position: absolute;
+  left: 24px;
+  top: -26px;
+  width: 40px;
+  height: 46px;
+  border-radius: 5px;
+  background: var(--paper);
+  transform: translateY(46px);
+  -webkit-animation: paper05 var(--duration) linear infinite;
+  animation: paper05 var(--duration) linear infinite;
+}
+
+.typewriter .paper:before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 7px;
+  border-radius: 2px;
+  height: 4px;
+  transform: scaleY(0.8);
+  background: var(--text);
+  box-shadow: 0 12px 0 var(--text), 0 24px 0 var(--text), 0 36px 0 var(--text);
+}
+
+.typewriter .keyboard {
+  width: 120px;
+  height: 56px;
+  margin-top: -10px;
+  z-index: 1;
+  position: relative;
+}
+
+.typewriter .keyboard:before, .typewriter .keyboard:after {
+  content: "";
+  position: absolute;
+}
+
+.typewriter .keyboard:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 7px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  transform: perspective(10px) rotateX(2deg);
+  transform-origin: 50% 100%;
+}
+
+.typewriter .keyboard:after {
+  left: 2px;
+  top: 25px;
+  width: 11px;
+  height: 4px;
+  border-radius: 2px;
+  box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  -webkit-animation: keyboard05 var(--duration) linear infinite;
+  animation: keyboard05 var(--duration) linear infinite;
+}
+
+@keyframes bounce05 {
+  85%, 92%, 100% {
+    transform: translateY(0);
+  }
+
+  89% {
+    transform: translateY(-4px);
+  }
+
+  95% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes slide05 {
+  5% {
+    transform: translateX(14px);
+  }
+
+  15%, 30% {
+    transform: translateX(6px);
+  }
+
+  40%, 55% {
+    transform: translateX(0);
+  }
+
+  65%, 70% {
+    transform: translateX(-4px);
+  }
+
+  80%, 89% {
+    transform: translateX(-12px);
+  }
+
+  100% {
+    transform: translateX(14px);
+  }
+}
+
+@keyframes paper05 {
+  5% {
+    transform: translateY(46px);
+  }
+
+  20%, 30% {
+    transform: translateY(34px);
+  }
+
+  40%, 55% {
+    transform: translateY(22px);
+  }
+
+  65%, 70% {
+    transform: translateY(10px);
+  }
+
+  80%, 85% {
+    transform: translateY(0);
+  }
+
+  92%, 100% {
+    transform: translateY(46px);
+  }
+}
+
+@keyframes keyboard05 {
+  5%, 12%, 21%, 30%, 39%, 48%, 57%, 66%, 75%, 84% {
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  }
+
+  9% {
+    box-shadow: 15px 2px 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  }
+
+  18% {
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 2px 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  }
+
+  27% {
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 12px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  }
+
+  36% {
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 12px 0 var(--key), 60px 12px 0 var(--key), 68px 12px 0 var(--key), 83px 10px 0 var(--key);
+  }
+
+  45% {
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 2px 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  }
+
+  54% {
+    box-shadow: 15px 0 0 var(--key), 30px 2px 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  }
+
+  63% {
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 12px 0 var(--key);
+  }
+
+  72% {
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 2px 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  }
+
+  81% {
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 12px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+  }
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .mainlogin {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .imagelogin {
+    display: none;
+  }
+}
+  
