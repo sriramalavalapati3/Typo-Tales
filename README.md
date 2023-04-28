@@ -57,6 +57,17 @@ NPM MODULES
     "socket.io": "^4.6.1",
      "dotenv": "^16.0.3",
      REDIS
+ 
+ NPM PACKAGES
+ <div align = "center">
+  
+ <img src="/highlights_img/we-1.png" width="700" height="350" />
+ <img src="/highlights_img/wec-2.png" width="700" height="350" />
+ <img src="/highlights_img/we-3.png" width="700" height="350" />
+ <img src="/highlights_img/we-4.png" width="700" height="350" />
+ <img src="/highlights_img/we-5.png" width="700" height="350" />
+  
+<div/>
 
 ![Alt Text](https://drive.google.com/uc?id=1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7)
 
