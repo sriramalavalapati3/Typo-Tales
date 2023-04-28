@@ -29,7 +29,7 @@ Leaderboards to view top performers in races and exercises
 Authentication system to manage user accounts and sessions
 Responsive design for optimal user experience on all devices
 
-Tech Stacks Used
+##Tech Stacks Used
 <p align = "center">
 <img src="https://github.com/PrinceCorwin/Useful-tech-icons/blob/main/images/HTML.png" alt="html" width="55" height="55"/>
 <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" width="50" height="55"/>
@@ -43,7 +43,7 @@ Tech Stacks Used
   
 </p>
 
-NPM MODULES 
+###NPM MODULES 
 
     "express": "^4.18.2",
     "mongoose": "^7.0.3",
