@@ -93,7 +93,18 @@ npm run server
 
 [http://localhost:8080](http://localhost:8080)
 ```
+### Environment Variables Required
+`mongoURL`
 
+`PORT`
+
+`Redis Cloud Password + Host + Port`
+
+`admin_tokenKey = adminToken`
+
+`jwtnormalToken = yourToken`
+
+`jwtrefreshToken = YourRefreshToken`
 
 
 
