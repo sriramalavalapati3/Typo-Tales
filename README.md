@@ -43,10 +43,6 @@ Tech Stacks Used
   
 </p>
 
-
-
-
-
 NPM MODULES 
 
     "express": "^4.18.2",
@@ -69,6 +65,34 @@ NPM MODULES
 <img src="https://user-images.githubusercontent.com/25181517/182884894-d3fa6ee0-f2b4-4960-9961-64740f533f2a.png" alt="redis" width="50" height="50"/>
 <img src="https://socket.io/images/logo.svg" alt="socket" width="70" height="50"/>
 </p>
+
+## Run Locally
+### Clone this Project
+```
+https://github.com/sriramalavalapati3/fabulous-vest-203.git
+```
+### Install npm Packages
+
+```javascript
+npm i --global
+```
+### Go to Backend Folder
+```
+cd backend1
+cd index.js
+```
+### Run Server
+```javascript
+
+npm run server
+```
+```
+### Runs the project in the development mode
+
+[http://localhost:8080](http://localhost:8080)
+```
+
+
 
 
 ![Alt Text](https://drive.google.com/uc?id=1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7)
