@@ -10,6 +10,16 @@ Typo Tales
 
 Typo Tales is a typing platform that allows users to take part in typing by creating groups with their friends and also practice alone. This project is a clone of TypoTales.com and was built within 5 days by a team of 4 members.
 
+Cloning of Slack application
+It is a collabrative project built by team of five members in 5 days.
+This app allows users to create channels and send messages to each other in real-time.
+
+##Deploy Link
+
+Netlify website link-> 
+render Backend link->
+render Socket link ->
+
 Features
 
 Create groups with friends and compete against each other in real-time typing races
@@ -19,33 +29,23 @@ Leaderboards to view top performers in races and exercises
 Authentication system to manage user accounts and sessions
 Responsive design for optimal user experience on all devices
 
-
-Installation
-Clone the repository to your local machine:
-
-bash
-Copy code
-git clone 
-Install dependencies:
-run ther server
-
-
-Contributing
-We welcome contributions from the community! If you would like to contribute to this project, please fork the repository and create a pull request.
-
-Contact
-If you have any questions or feedback, please feel free to reach out to us at contact@typotales.com.
-
-Acknowledgements
-We would like to thank the creators of typotales.com for providing the inspiration for this project.
-
-Special thanks to our mentors who provided guidance and support throughout the development process.
-
-Lastly, we would like to thank the open-source community for creating and maintaining the tools and libraries that made this project possible.
+Tech Stacks Used
+<p align = "center">
+<img src="https://github.com/PrinceCorwin/Useful-tech-icons/blob/main/images/HTML.png" alt="html" width="55" height="55"/>
+<img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" width="50" height="55"/>
+<img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="js" width="50" height="50"/>
+  <img src="https://socket.io/images/logo.svg" alt="socket.io" width="50" height="50"/>
+<img src="https://raw.githubusercontent.com/PrinceCorwin/Useful-tech-icons/main/images/nodejs.png" alt="nodejs" width="50" height="50"/>
+<img src="https://res.cloudinary.com/kc-cloud/images/f_auto,q_auto/v1651772163/expressjslogo/expressjslogo.webp?_i=AA" alt="express" width="50" height="50"/>
+ <img src="https://raw.githubusercontent.com/PrinceCorwin/Useful-tech-icons/main/images/mongodb-leaf.png" alt="mongo" width="50" height="50"/> 
+<img src="https://user-images.githubusercontent.com/25181517/182884894-d3fa6ee0-f2b4-4960-9961-64740f533f2a.png" alt="redis" width="50" height="50"/>
+<img src="https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png" alt="npm" width="50" height="50"/>
+  
+</p>
 
 
-Tech stack we used:
-HTML |CSS | JAVASCRIPT | NODEJS | SOCKET.IO | MONGODB | REDIS | EXPRESS
+
+
 
 NPM MODULES 
 
