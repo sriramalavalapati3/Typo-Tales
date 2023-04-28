@@ -17,10 +17,11 @@ This app allows users to enhance their typing skills and compitete among friends
 ```
 
 ## Deploy Link
-
-`Netlify website link-> 
-render Backend link->
-render Socket link ->`
+```
+-Netlify website link-> 
+-render Backend link->
+-render Socket link ->
+```
 
 ## Features
 
