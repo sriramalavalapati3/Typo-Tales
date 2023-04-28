@@ -10,9 +10,11 @@ Typo Tales
 
 Typo Tales is a typing platform that allows users to take part in typing by creating groups with their friends and also practice alone. This project is a clone of TypoTales.com and was built within 5 days by a team of 4 members.
 
-Cloning of Slack application
-It is a collabrative project built by team of five members in 5 days.
-This app allows users to create channels and send messages to each other in real-time.
+##Cloning of typeracer application
+```
+It is a collabrative project built by team of four members in 5 days.
+This app allows users to enhance their typing skills and compitete among friends and family members and practice privetly  real-time.
+```
 
 ##Deploy Link
 
