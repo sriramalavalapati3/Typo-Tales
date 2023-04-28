@@ -6,23 +6,23 @@
 ![Alt Text](https://drive.google.com/uc?id=1CZGRGsX65QfAaKT93XHxWZ8Fxyzr_wmp)
 
 
-Typo Tales
+## Typo Tales
 
 Typo Tales is a typing platform that allows users to take part in typing by creating groups with their friends and also practice alone. This project is a clone of TypoTales.com and was built within 5 days by a team of 4 members.
 
-##Cloning of typeracer application
+## Cloning of typeracer application
 ```
 It is a collabrative project built by team of four members in 5 days.
 This app allows users to enhance their typing skills and compitete among friends and family members and practice privetly  real-time.
 ```
 
-##Deploy Link
+## Deploy Link
 
 Netlify website link-> 
 render Backend link->
 render Socket link ->
 
-Features
+## Features
 
 Create groups with friends and compete against each other in real-time typing races
 Practice typing alone with various typing exercises and improve your typing skills
@@ -31,7 +31,7 @@ Leaderboards to view top performers in races and exercises
 Authentication system to manage user accounts and sessions
 Responsive design for optimal user experience on all devices
 
-##Tech Stacks Used
+## Tech Stacks Used
 <p align = "center">
 <img src="https://github.com/PrinceCorwin/Useful-tech-icons/blob/main/images/HTML.png" alt="html" width="55" height="55"/>
 <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" width="50" height="55"/>
@@ -45,7 +45,7 @@ Responsive design for optimal user experience on all devices
   
 </p>
 
-###NPM MODULES 
+## NPM MODULES 
 
     "express": "^4.18.2",
     "mongoose": "^7.0.3",
