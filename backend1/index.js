@@ -3,8 +3,8 @@ const app = express();
 const socketio = require("socket.io");
 const mongoose = require("mongoose");
 var randomId = require("random-id");
-const { User, update_word_function } = require("../user");
-let { users } = require("../user");
+const { User, update_word_function } = require("./user");
+let { users } = require("./user");
 
 // length of the id (default is 30)
 var len = 10;
@@ -59,7 +59,10 @@ let Room;
     console.log(socket.id + "from line no 68");
     socket.join(roomvalue);
     Room=roomvalue;
-    io.emit("usersarray", users)
+    let user_Data=users.filter((ele)=>{
+           ele.roomvalue===roomvalue
+    })
+    io.emit("usersarray", user_Data)
     socket.emit("message", "WELCOME TO RACE BUDDY 😉");
   });
   console.log(`One user connected, total user : ${count}`);
