@@ -1,10 +1,23 @@
 const users = [];
 
 function User(id, username, roomvalue) {
+
+  let vp = true;
+  users.filter((Element) => {
+    if (Element.username == username) {
+        vp = false;
+    }
+  });
+
+
   const user = { id, username, roomvalue, userSet: new Set() };
-  users.push(user);
-  console.log(users);
-  return user;
+  if(vp == true){
+    users.push(user);
+    return user;
+  }else{
+    return "Username already exists"
+  }
+
 }
 
 function update_word_function(socketID, typedText) {
@@ -25,4 +38,4 @@ function update_word_function(socketID, typedText) {
 
 // console.log(one_user);
 
-module.exports = { User, update_word_function };
+module.exports = { User, update_word_function, users };

@@ -1,10 +1,18 @@
 const express = require("express");
 const app = express();
 const socketio = require("socket.io");
+const {userRouter} = require("./routes/userRoutes");
 const mongoose = require("mongoose");
 var randomId = require("random-id");
 const { User, update_word_function } = require("./user");
 let { users } = require("./user");
+let cors = require("cors");
+let {connection} = require("./db")
+
+app.use(cors());
+app.use(express.json());
+
+app.use( userRouter);
 
 // length of the id (default is 30)
 var len = 10;
@@ -12,13 +20,17 @@ var len = 10;
 // default is aA0 it has a chance for lowercased capitals and numbers
 var pattern = "aA0";
 
-const expressServer = app.listen(8080, () => {
+const expressServer = app.listen(8080, async () => {
   try {
-    console.log("server running");
+    await connection
+    console.log("connected to db");
   } catch (error) {
     console.log(error.message);
   }
+
+  console.log("server running");
 });
+
 
 const io = socketio(expressServer);
 
@@ -31,7 +43,7 @@ const io = socketio(expressServer);
 
 // here is my ranodom paragraph
 let para = [
-  "So, I was essentially a "
+  "So, I was essentially a backbencher or some kind ofoutcast "
 ];
 // So, I was essentially a backbencher or some kind of outcast there. Feeling a bit dejected, I wanted to prove something my worth to them. So, I started to wait for an opportunity.
 function myFunction() {

@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Inter&family=Rubik&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6cc2dc03ef.js" crossorigin="anonymous"></script>
+
+
+
+
     <title>Document</title>
 </head>
 
@@ -23,7 +27,7 @@
             <a href="#">Pit Stop</a>
             <a href="#">Updates</a>
             <a href="#">Discord</a>
-            <a href="#">About</a>
+            <a href="./about.html">About</a>
             <a href="#">Merch</a>
             <div></div>
         </div>
@@ -32,11 +36,14 @@
                 <p>Guest</p>
             </div>
             <div class="lowerpart">
-                <a href="signup.html"><button class="createAc">CREATE ACCOUNT</button></a>
-                <a href=""><button class="signin1">SIGN IN</button></a>
-                <a href=""><button id="infomaster1">0 WPM</button></a>
-                <a href=""><button id="infomaster2">0 Races</button></a>
-                <a href=""><button id="logout">Logout</button></a>
+
+                
+                <a href=""><button id="usernamehere" class="createAc">User</button></a>
+                <a href=""><button class="signin1">Ex-c</button></a>
+                <a href=""><button id="infomaster1">30 WPM</button></a>
+                <a href=""><button id="infomaster2">10 Races</button></a>
+                <a id="some23" href="#"><button id="logout">Logout</button></a>
+
 
             </div>
         </div>
@@ -72,36 +79,11 @@
                         <p id="waitandjoin">The race is about to start!</p>
                     </div>
                     <div>
-                        <p id="timerstart">30</p>
+                        <p id="timerstart">90</p>
                     </div>
                 </div>
 
-                <div class="gamecarsstart">
-                    <div id="car">
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
-                            width="100">
-                    </div>
-                    <hr>
-                    <div id="car2">
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
-                            width="100">
-                    </div>
-                    <hr>
-                    <div id="car3">
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
-                            width="100">
-                    </div>
-                    <hr>
-                    <div id="car4">
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
-                            width="100">
-                    </div>
-                    <hr>
-                    <div id="car5">
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
-                            width="100">
-                    </div>
-                    <hr>
+                <div id="carinsideit" class="gamecarsstart">
 
                 </div>
 
@@ -113,22 +95,66 @@
                     </div>
 
                     <div id="inputfortype">
-                        <input id="damtext" type="text" placeholder="Type you text here" onkeyup="checkInput()">
+                        <input id="damtext" disabled type="text" placeholder="Type you text here"
+                            onkeyup="checkInput()">
+
                     </div>
                 </div>
 
                 <div class="afterresend">
-                    <button id="resendbtn">Main menu (Leave race)</button>
-                    <button id="raceagainbtn">Race again</button>
-                </div>
+                    <div>
+                        <button class="resendbtnclass" id="resendbtn">LEAVE RACE</button>
+                    </div>
+                    <div>
+                        <button class="raceagainbtnclass" id="raceagainbtn">START</button>
+                    </div>
+                </div><br><br><br><br>
             </div>
 
             <div id="kingname2323" class="nameking">
-                <div class="king2323">
-                    <a href=""><img src="./images/Screenshot 2023-03-28 214954.png" alt=""></a>
+                <div id="kvkv2332" class="king2323">
+                    <img src="./images/Screenshot 2023-03-28 214954.png" alt="">
                 </div>
-                <div class="king2323">
-                    <a href=""><img src="./images/bvh.png" alt=""></a>
+                <div id="smokkergdin" class="king2323">
+                    <!-- <img src="./images/bvh.png" alt=""> -->
+                    <div class="choice">
+                        <h1 class="headhaibhaihead">Create or join the game</h1>
+                        <button id="create">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> CREATE
+                        </button>
+                        <button id="join">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> JOIN
+                        </button>
+                    </div>
+                    <div class="create">
+                        <form action="index.html">
+                            <input type="text" id="enteryourname" name="nickname" placeholder="enter ur nickname" />
+                            <input type="text" name="value" value="0" style="display: none" />
+                            <button id="createbutton" type="submit">create</button>
+                        </form>
+                    </div>
+                    <div class="join">
+                        <form action="index.html">
+                            <input type="text" id="somejoin1" placeholder="enter nickname" name="nickname" />
+                            <input type="text" id="somejoin2" placeholder="enter ur gameid" name="roomvalue" />
+                            <input type="text" name="value" value="1" style="display: none" />
+                            <button id="createbutton">join</button>
+                        </form>
+                    </div>
+
+
+                    <div id="joinherebyvp" class="roomenter">
+                        <label id="roomshowingbro" for="room">Join this room</label><br>
+                        <p id="roomnumber"></p>
+                        <input type="text" id="roomvalue" placeholder="enter room id" />
+                        <button class="enteryarr" id="entertheroom">Enter</button>
+                    </div>
                 </div>
             </div>
 
@@ -139,6 +165,12 @@
                     <p class="prnamehere2">Save your race history and scores. Customize your profile and car. It's free,
                         why not?</p>
                 </div>
+
+
+
+
+
+
                 <div class="buttonhereyes">
                     <button id="buttonshowingforlogin">Create Your Account</button>
                 </div>
@@ -147,6 +179,8 @@
             <div class="demodemo23">
                 <img src="./images/ddnsk.png" alt="">
             </div>
+
+
 
 
         </div>
@@ -258,11 +292,104 @@
         </div>
     </footer>
 
+
+    <div class="module" id="cart-module">
+        <span>Proceed To Checkout</span>
+        <span class="module-close" onclick="closeModule()">&times;</span>
+    </div>
 </body>
 
 </html>
 
+<script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+    integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+    crossorigin="anonymous"></script>
+
 <script>
+
+
+    let usernamehere = document.getElementById("usernamehere");
+    usernamehere.innerText = localStorage.getItem("username");
+
+    let some23 = document.getElementById("some23");
+    let logout = document.getElementById("logout");
+
+    logout.addEventListener("click", async () => {
+        if (logout.innerText == "Login") {
+            window.location.href = "./login.html"
+        } else {
+            let s = localStorage.getItem("token");
+            let payload = {
+                token: s
+            }
+
+            let d = await fetch("http://localhost:8080/logout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            })
+
+            let res = await d.json();
+            console.log(res)
+
+            if (res.msg == "Logout successfully") {
+                localStorage.removeItem("token");
+                localStorage.removeItem("username");
+                usernamehere.innerText = "Guest"
+
+                const module = document.getElementById('cart-module');
+                module.innerText = "Logout Successfully"
+                module.style.display = 'block';
+                module.style.borderRadius = '20px';
+                module.style.backgroundColor = 'green'
+
+                setTimeout(() => {
+                    module.style.display = 'none';
+                }, 4000);
+
+                if ('speechSynthesis' in window) {
+                    const message = new SpeechSynthesisUtterance('Logout Successfully');
+                    const femaleVoices = speechSynthesis.getVoices().filter(voice => voice.name.includes('female'));
+                    if (femaleVoices.length > 0) {
+                        message.voice = femaleVoices[0];
+                    }
+                    speechSynthesis.speak(message);
+                }
+
+                // setTimeout(() => {
+                //     window.location.reload();
+                // }, 2000);
+
+                logout.innerText = "Login"
+            }
+        }
+    })
+
+
+
+
+
+
+
+    let create = document.querySelector("#create");
+    create.addEventListener("click", createfun);
+
+    function createfun() {
+        document.querySelector(".create").style.display = "block";
+        document.querySelector(".join").style.display = "none";
+        document.querySelector(".choice").style.display = "none";
+    }
+    let join = document.querySelector("#join");
+    join.addEventListener("click", joinfun);
+
+    function joinfun() {
+        document.querySelector(".create").style.display = "none";
+        document.querySelector(".join").style.display = "block";
+        document.querySelector(".choice").style.display = "none";
+    }
+
 
     let btnstart = document.getElementById("btnstart");
     let upperdiv = document.getElementById("upperdiv");
@@ -272,13 +399,35 @@
     let kingname2323 = document.getElementById("kingname2323");
     let rightside2 = document.getElementById("rightside2");
 
+
+
+    let donedone = false;
+
     btnstart.addEventListener("click", function () {
-        upperdiv.style.display = "none";
-        sane1sane1.style.display = "none";
-        kingname2323.style.display = "none";
-        datahereall.style.display = "none";
-        gamestarthere.style.display = "block";
-        rightside2.style.height = "1300px"
+        if (donedone) {
+            alert("You have already started the game");
+        } else {
+
+            const module = document.getElementById('cart-module');
+            module.innerText = "Create Room First"
+            module.style.display = 'block';
+            module.style.borderRadius = '20px';
+            module.style.backgroundColor = 'red'
+
+            if ('speechSynthesis' in window) {
+                const message = new SpeechSynthesisUtterance('Create Room First');
+                const femaleVoices = speechSynthesis.getVoices().filter(voice => voice.name.includes('female'));
+                if (femaleVoices.length > 0) {
+                    message.voice = femaleVoices[0];
+                }
+                speechSynthesis.speak(message);
+            }
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
+
+        }
     });
 
     let resendbtn = document.getElementById("resendbtn");
@@ -289,35 +438,278 @@
     });
 
 
-    const text = document.getElementById("thattext").innerHTML.trim();
-    const words = text.split(" ");
-    console.log(words)
-    let currentIndex = 0;
-    function checkInput() {
-        const input = document.getElementById("damtext").value.trim();
-        const currentWord = words[currentIndex];
-        const paragraph = document.getElementById("damtext");
-        const car = document.getElementById("car");
-        if (input === currentWord) {
-            paragraph.innerHTML = paragraph.innerHTML.replace(
-                currentWord,
-                `<span class="correct">${currentWord}</span>`
-            );
-            currentIndex++;
-            document.getElementById("damtext").value = "";
-            if (currentIndex >= words.length) {
-                document.getElementById("damtext").disabled = true;
+    function MakesetTimeintervalreverse1sec() {
+        let timeleft = 30;
+        let downloadTimer = setInterval(function () {
+            if (timeleft <= 0) {
+                clearInterval(downloadTimer);
+                document.getElementById("timerstart").innerHTML = "GO";
+
+
             } else {
-                car.style.left = `${currentIndex * 50}px`;
+                document.getElementById("timerstart").innerHTML = timeleft;
             }
-        } else if (input.startsWith(currentWord)) {
-            // if the current word is partially correct, do nothing
-        } else {
-            paragraph.innerHTML = paragraph.innerHTML.replace(
-                currentWord,
-                `<span class="incorrect">${currentWord}</span>`
-            );
-        }
+            timeleft -= 1;
+        }, 1000);
     }
+
+
+
+    let kvkv2332 = document.getElementById("kvkv2332");
+    let car2 = document.getElementById("car2");
+    let car3 = document.getElementById("car3");
+    let car4 = document.getElementById("car4");
+    let car5 = document.getElementById("car5");
+    let carinsideit = document.getElementById("carinsideit");
+
+    kvkv2332.addEventListener("click", function () {
+        upperdiv.style.display = "none";
+        sane1sane1.style.display = "none";
+        kingname2323.style.display = "none";
+        datahereall.style.display = "none";
+        carinsideit.style.height = "70px";
+        gamestarthere.style.display = "block";
+        rightside2.style.height = "1300px"
+        gamestarthere.style.height = "470px"
+    });
+
+
+
+    // ----------------------------------------------------------------------------------------------------------------------------------------Ansari code here
+    const socket = io("http://localhost:8080", {
+        transports: ["websocket"],
+    });
+
+    // socket.on('user count', (count) => {
+
+    //     socket.on("xyz", (vp) => {
+    //         console.log(vp)
+    //         document.getElementById("thattext").innerHTML = vp;
+    //     })
+
+    //     console.log(`There are ${count} users online`);
+
+    //     if (count == 6) {
+    //         alert("Room is full");
+    //     } else {
+
+    //         carinsideit.innerHTML = "";
+    //         for (let i = 0; i < count; i++) {
+    //             carinsideit.innerHTML += `<div id="car${i + 1}">
+    //                     <img src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
+    //                         width="100">
+    //                         <hr>
+    //                 </div>`
+    //         }
+
+    //         let car = document.getElementsByClassName("car");
+    //         for (let i = 0; i < car.length; i++) {
+    //             car[i].addEventListener("click", function () {
+    //                 alert("You are already in this car");
+    //             });
+    //         }
+    //     }
+    // });
+
+
+
+
+
+    let roomnumber = document.querySelector("#roomnumber");
+    let joinbutton = document.querySelector("#entertheroom");
+    let room = document.querySelector(".roomenter");
+    joinbutton.addEventListener("click", Join);
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get("nickname");
+    let roomvalue = urlParams.get("roomvalue");
+    let value = urlParams.get("value");
+
+
+
+
+    if (value == 0) {
+        room.style.display = "block";
+        socket.emit("username", { username });
+        socket.on("roomno", (id) => {
+            roomnumber.innerText = id;
+            console.log(id)
+            create.style.display = "none";
+            join.style.display = "none";
+            raceagainbtn.style.display = "block";
+
+
+        });
+    } else if (value == 1) {
+        socket.emit("joinroom", { username, roomvalue });
+    }
+
+    raceagainbtn.addEventListener("click", function () {
+        let damtext = document.getElementById("damtext");
+        damtext.disabled = false;
+        MakestartTimeIntervel1sec()
+        socket.emit("display", { "event": true });
+        raceagainbtn.style.display = "none";
+    });
+
+    socket.on("forall", (data) => {
+        let { event } = data;
+        if (event == true) {
+            let damtext = document.getElementById("damtext");
+            damtext.disabled = false;
+        }
+    });
+
+    function MakestartTimeIntervel1sec() {
+        let timeleft = 90;
+        let downloadTimer = setInterval(function () {
+            if (timeleft <= 0) {
+                socket.emit("timeleft", { timeleft });
+                clearInterval(downloadTimer);
+                document.getElementById("timerstart").innerHTML = "Race End";
+                let damtext = document.getElementById("damtext");
+                damtext.disabled = true;
+            } else {
+                document.getElementById("timerstart").innerHTML = timeleft;
+                socket.emit("timeleft", { timeleft });
+
+            }
+            timeleft -= 1;
+        }, 1000);
+    }
+    socket.on("Time", (data) => {
+        let { timeleft } = data
+        if (timeleft === 1) {
+            document.getElementById("damtext").disabled = true;
+        }
+        console.log(timeleft)
+        document.getElementById("timerstart").innerHTML = timeleft;
+    });
+    function Join() {
+        let roomvalue = document.querySelector("#roomvalue").value;
+        socket.emit("joinroom", { username, roomvalue });
+    }
+    let smokkergdin = document.getElementById("smokkergdin");
+    socket.on("message", (message) => {
+
+
+        smokkergdin.innerHTML = ` <div class="divheadclass"><h1 id="classhead">${message}</h1></div>`;
+        upperdiv.style.display = "none";
+        sane1sane1.style.display = "none";
+        kingname2323.style.display = "none";
+        datahereall.style.display = "none";
+        gamestarthere.style.display = "block";
+        rightside2.style.height = "1300px"
+        donedone = true;
+    });
+
+    //============================================================================================>
+    //recieving paragraph from server
+    let myGlobalPara;
+    socket.on("thePara", (para) => {
+        // console.log(para);
+        myGlobalPara = para;
+        document.getElementById("thattext").innerText = para;
+
+    });
+
+    //getting the input value here and sending to server for validation
+    let index = -1;
+    document.getElementById("damtext").addEventListener("keyup", (event) => {
+        const typedText = event.target.value;
+        let keyCode = event.keyCode;
+        index++;
+        if (typedText.length <= myGlobalPara.length) {
+            socket.emit("typedText", { typedText, keyCode });
+        }
+    });
+
+    // Receive validation result from the server
+    socket.on("reverse", (data) => {
+        console.log(data);
+    });
+
+    //when user joins
+    // socket.on("car-joined", ({ socketID }) => {
+    //     console.log(socketID);
+    //     if (socketID) {
+    //         const carElement = document.createElement("div");
+    //         // carElement.id = `${socketID}`;
+    //         carElement.className = "car";
+    //         let img = document.createElement("img");
+    //         img.setAttribute("id", `${socketID}`);
+    //         img.setAttribute(
+    //             "src",
+    //             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-mFTBi_muR16A0lX1mtrvoJMpiZPC7Fbkf6SWv3KATDeJs1750MyakJKyocm22onnj7w&usqp=CAU"
+    //         );
+    //         carElement.append(img);
+    //         document.getElementById("car_container").append(carElement);
+    //     }
+    // });
+
+    //updating the word per minute and moving the car from here
+    const wordsPerMinute = 60;
+    const carSpeed = 200; // adjust this as needed
+
+    socket.on(
+        "typing-update",
+        ({ socketID, isTyping, typedText, flag, wordCount, totalWords }) => {
+            console.log(typedText, flag);
+            if (flag !== true && flag !== false) {
+                let thattext = document.getElementById("thattext")
+                thattext.innerHTML = `<div class="divheadclass"><h1 id="classhead">${typedText}</h1></div>`
+                let damtext = document.getElementById("damtext")
+                damtext.disabled = true;
+            }
+            const car_img = document.getElementById(`${socketID}`);
+            if (isTyping) {
+                const speed = (+wordCount / wordsPerMinute) * carSpeed;
+                console.log(speed)
+                // car_img.style.animationDuration = `${speed}ms`;
+            } else {
+                // car_img.style.animationDuration = "0s";
+            }
+        }
+    );
+
+    socket.on("usersarray", (data) => {
+        carinsideit.innerHTML = "";
+        // MakesetTimeintervalreverse1sec();
+        data.forEach((element) => {
+            console.log(element);
+            carinsideit.innerHTML += `<div class="car">
+                <span id= onlyvp${element.id} class="usernamehere">${element.username}</span>
+                <img id=${element.id} src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
+                            width="100"> <hr> <span class="speedherena" id=speed${element.id}></span></div>`
+        })
+        console.log(data);
+    })
+    //getting the user data here
+    let startTime = null;
+    let count = 0;
+    socket.on("user_data", (data) => {
+        console.log("hi")
+        console.log(data);
+
+        let ss = data.id
+        let d = document.getElementById(ss)
+        d.style.marginLeft = `${data.wordCount * 10}%`
+
+
+        if (startTime === null) {
+            startTime = Date.now();
+        }
+        const elapsedTime = (Date.now() - startTime) / 1000;
+        const wpm = Math.round((data.wordCount / elapsedTime) * 60);
+
+        let snsnsn = document.getElementById(`speed${data.id}`);
+        snsnsn.innerHTML = `${wpm} wpm`;
+
+        if (data.wordCount === 4) {
+            let userhere20 = document.getElementById(`onlyvp${data.id}`)
+            userhere20.innerHTML = `${data.username}'s position ${++count}`
+        }
+
+    });
 
 </script>
