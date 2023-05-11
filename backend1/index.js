@@ -71,7 +71,10 @@ let Room;
     console.log(socket.id + "from line no 68");
     socket.join(roomvalue);
     Room=roomvalue;
-    io.emit("usersarray", users)
+    let user_Data=users.filter((ele)=>{
+           ele.roomvalue===roomvalue
+    })
+    io.emit("usersarray", user_Data)
     socket.emit("message", "WELCOME TO RACE BUDDY 😉");
   });
   console.log(`One user connected, total user : ${count}`);
