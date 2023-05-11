@@ -152,3 +152,6 @@ const includeFunction = (myParagraph, typedText) => {
 };
 
 module.exports = { count }
+
+
+
