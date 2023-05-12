@@ -241,11 +241,7 @@ socket.on("message", (message) => {
 
 //============================================================================================>
 //recieving paragraph from server and appending into the dom
-let myGlobalPara;
-socket.on("thePara", (para) => {
-  myGlobalPara = para;
-  document.getElementById("thattext").innerText = para;
-});
+
 
 //getting the input value here and sending to server for validation
 document.getElementById("damtext").addEventListener("keyup", (event) => {
@@ -279,10 +275,12 @@ socket.on(
     }
   }
 );
-
+let myGlobalPara;
 socket.on("usersarray", (data) => {
+ 
   carinsideit.innerHTML = "";
-  
+  document.getElementById("thattext").innerText = data[1];
+ 
   // MakesetTimeintervalreverse1sec();
   data[0].forEach((element) => {
     console.log(element);
@@ -293,6 +291,10 @@ socket.on("usersarray", (data) => {
   });
   console.log(data);
 });
+
+
+
+ 
 //getting the user data here
 let startTime = null;
 let count = 0;
