@@ -73,15 +73,16 @@ io.on("connection", (socket) => {
     socket.join(roomvalue);
     Room = roomvalue;
     let user_Data = users.filter((ele) => {
-      ele.roomvalue === roomvalue;
+      return ele.roomvalue == Room;
     });
     if (handleParagraph(roomvalue)) {
-      socket.to(roomvalue).emit("usersarray", [user_Data, groups[roomvalue]]);
+      io.to(roomvalue).emit("usersarray", [user_Data, groups[roomvalue]]);
     } else {
       let selectedpara = para[generateRandomNumber()];
       groups[roomvalue] = selectedpara;
-      socket.to(roomvalue).emit("usersarray", [user_Data, groups[roomvalue]]);
+      io.to(roomvalue).emit("usersarray", [user_Data, groups[roomvalue]]);
     }
+    
     //io.emit("usersarray", user_Data);
     socket.emit("message", "WELCOME TO RACE BUDDY 😉");
   });
