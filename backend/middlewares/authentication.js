@@ -11,9 +11,6 @@ const authentication = async (req, res, next) => {
 			}
 			var decoded = jwt.verify(token, process.env.jwtnormalToken)
 			req.userID = decoded.userID
-			//  console.log(decoded)
-			//   console.log(decoded.userID)
-			console.log(req.userID)
 			next()
 
 		} else {
