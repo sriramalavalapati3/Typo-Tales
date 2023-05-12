@@ -12,7 +12,7 @@ userRouter.post("/register", async (req, res) => {
 	let { email, username, password } = req.body;
 	const check = await UserModel.findOne({ username })
 	if (check) {
-		return res.send({ "msg": "User Already Register Please Login" })
+		return res.send({ "err": "User Already Register Please Login" })
 	} else {
 		try {
 			password = await bcrypt.hash(password, 10)
@@ -21,7 +21,7 @@ userRouter.post("/register", async (req, res) => {
 			res.send({ "msg": "Register Sucessfull" })
 
 		} catch (err) {
-			res.send({ "msg": "Something went wrong with register", "error": err.message })
+			res.send({ "err": "Something went wrong with register", "error": err.message })
 		}
 	}
 })
@@ -36,7 +36,6 @@ userRouter.post("/login", async (req, res) => {
 			return res.send("welcome admin")
 		}
 		const user = await UserModel.find({ username })
-		console.log(user)
 		if (user) {
 			bcrypt.compare(password, user[0].password, function (err, result) {
 				if (result) {
@@ -47,14 +46,14 @@ userRouter.post("/login", async (req, res) => {
 
 					res.send({ "msg": "login sucessfull", "normal_token": normal_token, "refresh_token": refresh_token, user })
 				} else {
-					res.send("wrong password")
+					res.send({"err":"Invalid Password"})
 				}
 			})
 		} else {
-			res.send("Register first")
+			res.send({"err":"Invalid Username"})
 		}
 	} catch (err) {
-		return res.send({ "msg": "Something went wrong" })
+		return res.send({ "err": "Something went wrong" })
 	}
 })
 

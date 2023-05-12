@@ -1,21 +1,23 @@
 const express = require("express");
 const app = express();
 const socketio = require("socket.io");
-const {userRouter} = require("./routes/userRoutes");
+const { userRouter } = require("./routes/userRoutes");
 const mongoose = require("mongoose");
 var randomId = require("random-id");
 const { User, update_word_function } = require("./user");
 let { users } = require("./user");
 let cors = require("cors");
-let {connection} = require("./db")
+let { connection } = require("./db")
 
 app.use(cors());
 app.use(express.json());
 
-app.use( userRouter);
+app.use(userRouter);
 
 // length of the id (default is 30)
 var len = 10;
+
+
 // pattern to determin how the id will be generated
 // default is aA0 it has a chance for lowercased capitals and numbers
 var pattern = "aA0";
@@ -61,18 +63,18 @@ io.on("connection", (socket) => {
   socket.on("username", ({ username }) => {
 
     var id = randomId(len, pattern);
-    console.log(id);
     socket.emit("roomno", id);
   });
-let Room;
+
+  let Room;
   socket.on("joinroom", ({ username, roomvalue }) => {
     const user = User(socket.id, username, roomvalue);
     console.log(roomvalue + "from join room");
     console.log(socket.id + "from line no 68");
     socket.join(roomvalue);
-    Room=roomvalue;
-    let user_Data=users.filter((ele)=>{
-           ele.roomvalue===roomvalue
+    Room = roomvalue;
+    let user_Data = users.filter((ele) => {
+      ele.roomvalue === roomvalue
     })
     io.emit("usersarray", user_Data)
     socket.emit("message", "WELCOME TO RACE BUDDY 😉");
@@ -80,8 +82,8 @@ let Room;
   console.log(`One user connected, total user : ${count}`);
 
   socket.on("timeleft", (data) => {
-   let {timeleft}=data;
-   socket.broadcast.to(Room).emit("Time",{timeleft})
+    let { timeleft } = data;
+    socket.broadcast.to(Room).emit("Time", { timeleft })
   });
   io.emit('user count', count);
 
