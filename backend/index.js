@@ -73,7 +73,6 @@ io.on("connection", (socket) => {
     socket.join(roomvalue);
     Room = roomvalue;
     let user_Data = users.filter((ele) => {
-
       return ele.roomvalue == Room;
     });
     if (handleParagraph(roomvalue)) {
@@ -83,12 +82,11 @@ io.on("connection", (socket) => {
       groups[roomvalue] = selectedpara;
       io.to(roomvalue).emit("usersarray", [user_Data, groups[roomvalue]]);
     }
-    
+
     //io.emit("usersarray", user_Data);
     socket.emit("message", "WELCOME TO RACE BUDDY 😉");
   });
 
-  
   console.log(`One user connected, total user : ${count}`);
 
   socket.on("timeleft", (data) => {
@@ -110,10 +108,10 @@ io.on("connection", (socket) => {
     console.log(`person having id ${socket.id} is typing :`, typedText);
 
     if (
-      typedText[typedText.length - 1] == myParagraph[typedText.length - 1] &&
-      includeFunction(myParagraph, typedText)
+      typedText[typedText.length - 1] == groups[Room][typedText.length - 1] &&
+      includeFunction(groups[Room], typedText)
     ) {
-      if (typedText.length == myParagraph.length) {
+      if (typedText.length == groups[Room].length) {
         console.log(typedText);
         // users = []
         return socket.emit("typing-update", {

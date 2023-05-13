@@ -1,394 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Inter&family=Rubik&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6cc2dc03ef.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&family=Inter&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6cc2dc03ef.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div class="main_img">
-            <div class="gadi1"> <img src="./images/gadi.png" alt=""></div>
-            <div class="logo1"><img src="./images/tYPO TALES.png" alt=""></div>
-
+      <div class="main_img">
+        <div class="gadi1"><img src="./images/gadi.png" alt="" /></div>
+        <div class="logo1"><img src="./images/tYPO TALES.png" alt="" /></div>
+      </div>
+      <div class="nav-items">
+        <a href="#">Pit Stop</a>
+        <a href="#">Updates</a>
+        <a href="#">Discord</a>
+        <a href="../PUBLIC/about.html">About</a>
+        <a href="#">Merch</a>
+        <div></div>
+      </div>
+      <div class="rdnav">
+        <div class="upperpart">
+          <p>TypoTales</p>
         </div>
-        <div class="nav-items">
-            <a href="#">Pit Stop</a>
-            <a href="#">Updates</a>
-            <a href="#">Discord</a>
-            <a href="../PUBLIC/about.html">About</a>
-            <a href="#">Merch</a>
-            <div></div>
+        <div class="lowerpart">
+          <div class="leftsidenavvv">
+            <a href=""
+              ><button id="usernamehere" class="createAc">User</button></a
+            >
+            <a href=""><button class="signin1">Ex-c</button></a>
+            <a href=""><button id="infomaster1">0 WPM</button></a>
+            <a href=""><button id="infomaster2">0 Races</button></a>
+          </div>
+          <div class="rightsidenavvv">
+            <a id="some23" href="#"><button id="logout">Login</button></a>
+          </div>
         </div>
-        <div class="rdnav">
-            <div class="upperpart">
-                <p>TypoTales</p>
-            </div>
-            <div class="lowerpart">
-
-
-                <div class="leftsidenavvv">
-                    <a href=""><button id="usernamehere" class="createAc">User</button></a>
-                    <a href=""><button class="signin1">Ex-c</button></a>
-                    <a href=""><button id="infomaster1">0 WPM</button></a>
-                    <a href=""><button id="infomaster2">0 Races</button></a>
-                </div>
-                <div  class="rightsidenavvv">
-                    <a id="some23" href="#"><button id="logout">Login</button></a>
-                </div>
-
-
-            </div>
-        </div>
+      </div>
     </nav>
 
     <div class="submain">
-
-        <div class="headdown1">
-            <div id="sane1sane1" class="sane1">
-                <div>
-                    <img class="gadi22" src="./images/gadi.png" alt="">
-                </div>
-                <div>
-                    <p class="textsubmain">TypoTales - The Global Typing Competition</p>
-                    <p class="textsmall">Increase your typing speed while racing against others!</p>
-                </div>
+      <div class="headdown1">
+        <div id="sane1sane1" class="sane1">
+          <div>
+            <img class="gadi22" src="./images/gadi.png" alt="" />
+          </div>
+          <div>
+            <p class="textsubmain">TypoTales - The Global Typing Competition</p>
+            <p class="textsmall">
+              Increase your typing speed while racing against others!
+            </p>
+          </div>
+        </div>
+        <div id="upperdiv" class="divupper">
+          <div><button id="btnstart">Enter A Typing Race</button></div>
+          <div class="samimage">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/006/771/093/non_2x/red-racing-car-on-white-background-free-vector.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="datahereall" class="herealldata">
+          <span class="languageblue"
+            >Language : <span class="languageblue">English</span></span
+          ><span class="languageblue">Instant Death Mode : </span
+          ><span class="languageblue">on </span
+          ><span class="languageblue"
+            >Theme : <span class="languageblue">Responsive</span></span
+          >
+        </div>
+        <!-- -----------------------------------------------------------------------GAME START PART HERE ---------------------------------------------- -->
+        <div id="gamestarthere">
+          <div id="topmostshowing">
+            <div>
+              <p id="waitandjoin">The race is about to start!</p>
             </div>
-            <div id="upperdiv" class="divupper">
-                <div><button id="btnstart">Enter A Typing Race</button></div>
-                <div class="samimage"><img
-                        src="https://static.vecteezy.com/system/resources/previews/006/771/093/non_2x/red-racing-car-on-white-background-free-vector.jpg"
-                        alt=""></div>
+            <div>
+              <p id="timerstart">90</p>
             </div>
-            <div id="datahereall" class="herealldata">
-                <span class="languageblue">Language : <span class="languageblue">English</span></span><span
-                    class="languageblue">Instant Death Mode : </span><span class="languageblue">on </span><span
-                    class="languageblue">Theme : <span class="languageblue">Responsive</span></span>
-            </div>
-            <!-- -----------------------------------------------------------------------GAME START PART HERE ---------------------------------------------- -->
-            <div id="gamestarthere">
-                <div id="topmostshowing">
-                    <div>
-                        <p id="waitandjoin">The race is about to start!</p>
-                    </div>
-                    <div>
-                        <p id="timerstart">90</p>
-                    </div>
-                </div>
+          </div>
 
-                <div id="carinsideit" class="gamecarsstart">
+          <div id="carinsideit" class="gamecarsstart"></div>
 
-                </div>
-
-                <div class="textshowingstart">
-                    <div>
-                        <p id="thattext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ducimus
-                            quidem ipsum officia est eaque dignissimos sed laudantium ipsam voluptates repellendus
-                            minima dolore fugiat, aut placeat.</p>
-                    </div>
-
-                    <div id="inputfortype">
-                        <input id="damtext" disabled type="text" placeholder="Type you text here"
-                            onkeyup="checkInput()">
-
-                    </div>
-                </div>
-
-                <div class="afterresend">
-                    <div>
-                        <button class="resendbtnclass" id="resendbtn">LEAVE RACE</button>
-                    </div>
-                    <div>
-                        <button class="raceagainbtnclass" id="raceagainbtn">START</button>
-                    </div>
-                </div><br><br><br><br>
+          <div class="textshowingstart">
+            <div>
+              <p id="thattext">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur ducimus quidem ipsum officia est eaque dignissimos
+                sed laudantium ipsam voluptates repellendus minima dolore
+                fugiat, aut placeat.
+              </p>
             </div>
 
-            <div id="kingname2323" class="nameking">
-                <div id="kvkv2332" class="king2323">
-                    <img src="./images/Screenshot 2023-03-28 214954.png" alt="">
-                </div>
-                <div id="smokkergdin" class="king2323">
-                    <!-- <img src="./images/bvh.png" alt=""> -->
-                    <div class="choice">
-                        <h1 class="headhaibhaihead">Create or join the game</h1>
-                        <button id="create">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span> CREATE
-                        </button>
-                        <button id="join">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span> JOIN
-                        </button>
-                    </div>
-                    <div class="create">
-                        <form action="index.html">
-                            <input type="text" id="enteryourname" name="nickname" placeholder="enter ur nickname" />
-                            <input type="text" name="value" value="0" style="display: none" />
-                            <button id="createbutton" type="submit">create</button>
-                        </form>
-                    </div>
-                    <div class="join">
-                        <form action="index.html">
-                            <input type="text" id="somejoin1" placeholder="enter nickname" name="nickname" />
-                            <input type="text" id="somejoin2" placeholder="enter ur gameid" name="roomvalue" />
-                            <input type="text" name="value" value="1" style="display: none" />
-                            <button id="createbutton">join</button>
-                        </form>
-                    </div>
-
-
-                    <div id="joinherebyvp" class="roomenter">
-                        <label id="roomshowingbro" for="room">Join this room</label><br>
-                        <p id="roomnumber"></p>
-                        <input type="text" id="roomvalue" placeholder="enter room id" />
-                        <button class="enteryarr" id="entertheroom">Enter</button>
-                    </div>
-                </div>
+            <div id="inputfortype">
+              <input
+                id="damtext"
+                disabled
+                type="text"
+                placeholder="Type you text here"
+              />
             </div>
+          </div>
 
-            <!-- ------------------------------------------------------------------------------------------------------------dowwn parttt -->
-            <div class="logoanddatahere">
-                <div class="textandparahere">
-                    <p class="prnamehere1">Record your races with a TypoTales Account!</p>
-                    <p class="prnamehere2">Save your race history and scores. Customize your profile and car. It's free,
-                        why not?</p>
-                </div>
-
-
-
-
-
-
-                <div class="buttonhereyes">
-                    <button id="buttonshowingforlogin">Create Your Account</button>
-                </div>
+          <div class="afterresend">
+            <div>
+              <button class="resendbtnclass" id="resendbtn">LEAVE RACE</button>
             </div>
-
-            <div class="demodemo23">
-                <img src="./images/ddnsk.png" alt="">
+            <div>
+              <button class="raceagainbtnclass" id="raceagainbtn">START</button>
             </div>
-
-
-
-
+          </div>
+          <br /><br /><br /><br />
         </div>
 
+        <div id="kingname2323" class="nameking">
+          <div id="kvkv2332" class="king2323">
+            <img src="./images/Screenshot 2023-03-28 214954.png" alt="" />
+          </div>
+          <div id="smokkergdin" class="king2323">
+            <!-- <img src="./images/bvh.png" alt=""> -->
+            <div class="choice">
+              <h1 class="headhaibhaihead">Create or join the game</h1>
+              <button id="create">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> CREATE
+              </button>
+              <button id="join">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> JOIN
+              </button>
+            </div>
+            <div class="create">
+              <form action="index.html">
+                <input
+                  type="text"
+                  id="enteryourname"
+                  name="nickname"
+                  placeholder="enter ur nickname"
+                />
+                <input
+                  type="text"
+                  name="value"
+                  value="0"
+                  style="display: none"
+                />
+                <button id="createbutton" type="submit">create</button>
+              </form>
+            </div>
+            <div class="join">
+              <form action="index.html">
+                <input
+                  type="text"
+                  id="somejoin1"
+                  placeholder="enter nickname"
+                  name="nickname"
+                />
+                <input
+                  type="text"
+                  id="somejoin2"
+                  placeholder="enter ur gameid"
+                  name="roomvalue"
+                />
+                <input
+                  type="text"
+                  name="value"
+                  value="1"
+                  style="display: none"
+                />
+                <button id="createbutton">join</button>
+              </form>
+            </div>
 
-
-        <div id="rightside2" class="rightside2">
-            <img src="./images/hit.png" alt="">
+            <div id="joinherebyvp" class="roomenter">
+              <label id="roomshowingbro" for="room">Join this room</label><br />
+              <p id="roomnumber"></p>
+              <input type="text" id="roomvalue" placeholder="enter room id" />
+              <button class="enteryarr" id="entertheroom">Enter</button>
+            </div>
+          </div>
         </div>
 
+        <!-- ------------------------------------------------------------------------------------------------------------dowwn parttt -->
+        <div class="logoanddatahere">
+          <div class="textandparahere">
+            <p class="prnamehere1">
+              Record your races with a TypoTales Account!
+            </p>
+            <p class="prnamehere2">
+              Save your race history and scores. Customize your profile and car.
+              It's free, why not?
+            </p>
+          </div>
+
+          <div class="buttonhereyes">
+            <button id="buttonshowingforlogin">Create Your Account</button>
+          </div>
+        </div>
+
+        <div class="demodemo23">
+          <img src="./images/ddnsk.png" alt="" />
+        </div>
+      </div>
+
+      <div id="rightside2" class="rightside2">
+        <img src="./images/hit.png" alt="" />
+      </div>
     </div>
 
     <div class="bottomrank">
-        <div class="bottomleftbig">
-            <div class="topbuttonsbot">
-                <button id="btn1bottom"><i class="fa-sharp fa-solid fa-desktop"></i> Latest High Scores</button>
-                <button id="btn2bottom"> <i class="fa-solid fa-user"></i> My Scores</button>
-                <button id="btn3bottom"> <i class="fa-solid fa-thumbs-up"></i>Hall of Fame</button>
-                <button id="btn4bottom"> <i class="fa-solid fa-wand-magic-sparkles"></i>Competition's</button>
-            </div><br>
-
-            <div class="rankingboard">
-                <div class="topnamespeed">
-                    <div>Sr. No</div>
-                    <div>Name</div>
-                    <div>Speed</div>
-                    <div>Time</div>
-                </div>
-
-                <div id="backcnage1" class="no1cat">
-                    <div>1</div>
-                    <div>Vishal</div>
-                    <div>64ms</div>
-                    <div>5mins</div>
-                </div>
-
-                <div class="no1cat">
-                    <div>2</div>
-                    <div>Shriram</div>
-                    <div>50ms</div>
-                    <div>20mis</div>
-                </div>
-                <div id="backcnage1" class="no1cat">
-                    <div>3</div>
-                    <div>Ansari</div>
-                    <div>60ms</div>
-                    <div>30mins</div>
-                </div>
-                <div class="no1cat">
-                    <div>4</div>
-                    <div>Saurabh</div>
-                    <div>80ms</div>
-                    <div>1hr</div>
-                </div>
-                <div id="specialno1cat" class="no1cat">
-                    <div>5</div>
-                    <div>Albert</div>
-                    <div>30ms</div>
-                    <div>10hr</div>
-                </div>
-            </div>
-
-            <div class="onlyimghereguys">
-                <a href="#"><img src="./images/2.png" alt=""></a>
-            </div>
+      <div class="bottomleftbig">
+        <div class="topbuttonsbot">
+          <button id="btn1bottom">
+            <i class="fa-sharp fa-solid fa-desktop"></i> Latest High Scores
+          </button>
+          <button id="btn2bottom">
+            <i class="fa-solid fa-user"></i> My Scores
+          </button>
+          <button id="btn3bottom">
+            <i class="fa-solid fa-thumbs-up"></i>Hall of Fame
+          </button>
+          <button id="btn4bottom">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>Competition's
+          </button>
         </div>
-        <div class="bottomrightbig">
-            <img src="./images/promo2.png" alt="">
+        <br />
+
+        <div class="rankingboard">
+          <div class="topnamespeed">
+            <div>Sr. No</div>
+            <div>Name</div>
+            <div>Speed</div>
+            <div>Time</div>
+          </div>
+
+          <div id="backcnage1" class="no1cat">
+            <div>1</div>
+            <div>Vishal</div>
+            <div>64ms</div>
+            <div>5mins</div>
+          </div>
+
+          <div class="no1cat">
+            <div>2</div>
+            <div>Shriram</div>
+            <div>50ms</div>
+            <div>20mis</div>
+          </div>
+          <div id="backcnage1" class="no1cat">
+            <div>3</div>
+            <div>Ansari</div>
+            <div>60ms</div>
+            <div>30mins</div>
+          </div>
+          <div class="no1cat">
+            <div>4</div>
+            <div>Saurabh</div>
+            <div>80ms</div>
+            <div>1hr</div>
+          </div>
+          <div id="specialno1cat" class="no1cat">
+            <div>5</div>
+            <div>Albert</div>
+            <div>30ms</div>
+            <div>10hr</div>
+          </div>
         </div>
+
+        <div class="onlyimghereguys">
+          <a href="#"><img src="./images/2.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="bottomrightbig">
+        <img src="./images/promo2.png" alt="" />
+      </div>
     </div>
 
     <footer class="nb-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="about">
-                        <p>Experience the ultimate thrill of TypoTales, the premier gaming typing site! Sharpen your
-                            fingers and conquer the virtual world with lightning-fast typing skills. Level up your
-                            accuracy and speed as you embark on epic quests
-                        </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="about">
+              <p>
+                Experience the ultimate thrill of TypoTales, the premier gaming
+                typing site! Sharpen your fingers and conquer the virtual world
+                with lightning-fast typing skills. Level up your accuracy and
+                speed as you embark on epic quests
+              </p>
 
-                        <div class="social-media">
-                            <ul class="list-inline">
-                                <li><a href="#" title=""><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li><a href="#" title=""><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footervp">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-info-single">
-                            <h2 class="title">Help Center</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Delivery Info</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-info-single">
-                            <h2 class="title">Customer information</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sell Your Items</a>
-                                </li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> RSS</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-info-single">
-                            <h2 class="title">Security & privacy</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a>
-                                </li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Return / Refund
-                                        Policy</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Store Locations</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-info-single">
-                            <h2 class="title">TYPING</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Typing Awareness</a>
-                                </li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Typing Education</a>
-                                </li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Leasing</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Refund Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-info-single">
-                            <h2 class="title">USEFUL LINKS</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Blogs</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Scientific Journal</a>
-                                </li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> News & Media</a></li>
-                                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Coupon Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-info-single">
-                        <!-- <h2 class="title">Payment</h2> -->
-                        <p class="pnormfoot" style="color: black; font-size: 18px;">Contact us today to schedule your
-                            next appointment.</p>
-
-                    </div>
-                </div>
+              <div class="social-media">
+                <ul class="list-inline">
+                  <li>
+                    <a href="#" title=""><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" title=""><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" title=""><i class="fa fa-google-plus"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" title=""><i class="fa fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+
+          <div class="footervp">
+            <div class="col-md-3 col-sm-6">
+              <div class="footer-info-single">
+                <h2 class="title">Help Center</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> How to Pay</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> FAQ's</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Sitemap</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Delivery Info</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <div class="footer-info-single">
+                <h2 class="title">Customer information</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> FAQ's</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Sell Your
+                      Items</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Contact Us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> RSS</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <div class="footer-info-single">
+                <h2 class="title">Security & privacy</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Terms Of Use</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Privacy
+                      Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Return / Refund
+                      Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Store
+                      Locations</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <div class="footer-info-single">
+                <h2 class="title">TYPING</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Typing
+                      Awareness</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Typing
+                      Education</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Leasing</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Refund Policy</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <div class="footer-info-single">
+                <h2 class="title">USEFUL LINKS</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Blogs</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Scientific
+                      Journal</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> News & Media</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title=""
+                      ><i class="fa fa-angle-double-right"></i> Coupon Policy</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-info-single">
+              <!-- <h2 class="title">Payment</h2> -->
+              <p class="pnormfoot" style="color: black; font-size: 18px">
+                Contact us today to schedule your next appointment.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="subscribeemail">
-            <p id="lablefooter" for="">Enter Your Email : </p>
-            <input type="email" id="inpufoot" required><br>
-            <button id="footersubmitbtn">SUBMIT</button>
-        </div><br><br>
+      <div class="subscribeemail">
+        <p id="lablefooter" for="">Enter Your Email :</p>
+        <input type="email" id="inpufoot" required /><br />
+        <button id="footersubmitbtn">SUBMIT</button>
+      </div>
+      <br /><br />
 
-        <section class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <p class="parafoot">Copyright © 2017. Your Company.</p>
-                    </div>
-                    <div class="col-sm-6"></div>
-                </div>
+      <section class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="parafoot">Copyright © 2017. Your Company.</p>
             </div>
-        </section>
+            <div class="col-sm-6"></div>
+          </div>
+        </div>
+      </section>
     </footer>
 
-
     <div class="module" id="cart-module">
-        <span>Proceed To Checkout</span>
-        <span class="module-close" onclick="closeModule()">&times;</span>
+      <span>Proceed To Checkout</span>
+      <span class="module-close" onclick="closeModule()">&times;</span>
     </div>
-</body>
-
+  </body>
 </html>
 
-<script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
-    integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous">
-    </script>
+<script
+  src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+  integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+  crossorigin="anonymous"
+></script>
 
 <script src="./index.js"></script>

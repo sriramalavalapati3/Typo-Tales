@@ -242,14 +242,13 @@ socket.on("message", (message) => {
 //============================================================================================>
 //recieving paragraph from server and appending into the dom
 
-
 //getting the input value here and sending to server for validation
-document.getElementById("damtext").addEventListener("keyup", (event) => {
-  const typedText = event.target.value;
-  if (typedText.length <= myGlobalPara.length) {
-    socket.emit("typedText", { typedText });
-  }
-});
+// document.getElementById("damtext").addEventListener("keyup", (event) => {
+//   const typedText = event.target.value;
+//   if (typedText.length <= myGlobalPara.length) {
+//     socket.emit("typedText", { typedText });
+//   }
+// });
 
 //updating the word per minute and moving the car from here
 const wordsPerMinute = 60;
@@ -268,7 +267,7 @@ socket.on(
     const car_img = document.getElementById(`${socketID}`);
     if (isTyping) {
       const speed = (+wordCount / wordsPerMinute) * carSpeed;
-      console.log(speed);
+      // console.log(speed);
       // car_img.style.animationDuration = `${speed}ms`;
     } else {
       // car_img.style.animationDuration = "0s";
@@ -278,10 +277,9 @@ socket.on(
 
 let myGlobalPara;
 socket.on("usersarray", (data) => {
- 
   carinsideit.innerHTML = "";
   document.getElementById("thattext").innerText = data[1];
- 
+  myGlobalPara = data[1];
   // MakesetTimeintervalreverse1sec();
   data[0].forEach((element) => {
     console.log(element);
@@ -293,10 +291,14 @@ socket.on("usersarray", (data) => {
   });
   console.log(data);
 });
+document.getElementById("damtext").addEventListener("keyup", (event) => {
+  const typedText = event.target.value;
+  // console.log(typedText);
+  if (typedText.length <= myGlobalPara.length) {
+    socket.emit("typedText", { typedText });
+  }
+});
 
-
-
- 
 //getting the user data here
 let startTime = null;
 let count = 0;
