@@ -281,8 +281,6 @@ socket.on("usersarray", (data) => {
  
   carinsideit.innerHTML = "";
   document.getElementById("thattext").innerText = data[1];
- 
-  // MakesetTimeintervalreverse1sec();
   data[0].forEach((element) => {
     console.log(element);
     carinsideit.innerHTML += `<div class="car">

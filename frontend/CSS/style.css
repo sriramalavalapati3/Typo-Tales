@@ -1248,8 +1248,6 @@ footer.nb-footer .copyright p {
 /* responsiveness */
 
 @media screen and (min-width:750px) and (max-width: 1100px) {
-
-    /* Styles for devices with a screen width between 768px and 1024px */
     
     .nav-items {
         display: none;
@@ -1259,15 +1257,25 @@ footer.nb-footer .copyright p {
     }
 
     .headdown1 {
-        border: 5px solid black;
         width: 100%;
+    }
+    .bottomrightbig{
+        display: none;
+    }
+    .bottomleftbig{
+        display: none;
+    }
+    footer{
+        margin-top: 90%;
+    }
+    #kingname2323 {
+        margin-top: 10%;
     }
     
 }
 
 
 @media screen and (min-width:450px) and (max-width: 750px) {
-    /* Styles for devices with a screen width between 768px and 1024px */
     .nav-items {
         display: none;
     }
@@ -1279,7 +1287,6 @@ footer.nb-footer .copyright p {
     }
     
     .headdown1 {
-        border: 5px solid black;
         width: 100%;
     }
 
@@ -1291,7 +1298,9 @@ footer.nb-footer .copyright p {
         width: 90%;
     }
     #btnstart{
-        width: 100%;
+       display: block;
+       margin: auto;
+       margin-left: 140px;
     }
 
 
@@ -1319,11 +1328,77 @@ footer.nb-footer .copyright p {
     .btnleft {
         margin-right: 30%;
     }
+    
 
+    .samimage{
+        display: none;
+    }
 
+    .textsubmain {
+        font-size: 16px;
+    }
 
+    .samimage img {
+        width: 80%;
+        margin-top: 50%;
+        text-align: center;
+    }
+    #btnstart{
+       padding: 10px;
+     margin-left: 0px;
+    }
+    #sane1sane1{
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius : 10px;
+    }
 
+    .divupper{
+        margin-top: 10px;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #A0AECD;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .headdown1 {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .herealldata{
+        display: none;
+    }
+
+    .bottomrightbig {
+        display: none;
+    }
+    
+    .bottomrightbig{
+        display: none;
+    }
+    .bottomleftbig{
+        display: none;
+    }
+    footer{
+        margin-top: 120%;
+    }
+    #kingname2323 {
+        margin-top: 19%;
+    }
+    #kvkv2332{
+        display: none;
+    }
+    #roomshowingbro {
+        margin-left: -30px;
+    }
+    .headhaibhaihead{
+        display: none;
+    }
 }
+
 
 
 @media screen and (min-width:0px) and (max-width: 450px) {
