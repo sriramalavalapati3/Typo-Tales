@@ -275,6 +275,7 @@ socket.on(
     }
   }
 );
+
 let myGlobalPara;
 socket.on("usersarray", (data) => {
  
@@ -285,6 +286,7 @@ socket.on("usersarray", (data) => {
   data[0].forEach((element) => {
     console.log(element);
     carinsideit.innerHTML += `<div class="car">
+    
             <span id= onlyvp${element.id} class="usernamehere">${element.username}</span>
             <img id=${element.id} src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
                         width="100"> <hr> <span class="speedherena" id=speed${element.id}></span></div>`;

@@ -73,6 +73,7 @@ io.on("connection", (socket) => {
     socket.join(roomvalue);
     Room = roomvalue;
     let user_Data = users.filter((ele) => {
+
       return ele.roomvalue == Room;
     });
     if (handleParagraph(roomvalue)) {
@@ -86,6 +87,8 @@ io.on("connection", (socket) => {
     //io.emit("usersarray", user_Data);
     socket.emit("message", "WELCOME TO RACE BUDDY 😉");
   });
+
+  
   console.log(`One user connected, total user : ${count}`);
 
   socket.on("timeleft", (data) => {
