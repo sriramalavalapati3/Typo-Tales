@@ -331,9 +331,9 @@ socket.on(
     }
 );
 
+// moving the car from here
 socket.on("usersarray", (data) => {
     carinsideit.innerHTML = "";
-    // MakesetTimeintervalreverse1sec();
     data.forEach((element) => {
         console.log(element);
         carinsideit.innerHTML += `<div class="car">

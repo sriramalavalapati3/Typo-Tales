@@ -76,9 +76,11 @@ io.on("connection", (socket) => {
     let user_Data = users.filter((ele) => {
       ele.roomvalue === roomvalue
     })
-    io.emit("usersarray", user_Data)
+    socket.to(Room).emit("usersarray", user_Data)
     socket.emit("message", "WELCOME TO RACE BUDDY 😉");
   });
+
+  
   console.log(`One user connected, total user : ${count}`);
 
   socket.on("timeleft", (data) => {

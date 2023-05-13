@@ -31,11 +31,7 @@ function update_word_function(socketID, typedText) {
     }
   });
 
-  // console.log(one_user);
-  // console.log(users);
   return one_user;
 }
-
-// console.log(one_user);
 
 module.exports = { User, update_word_function, users };
