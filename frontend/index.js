@@ -276,20 +276,32 @@ socket.on(
 );
 
 let myGlobalPara;
+let myGlobalParaLenght;
 socket.on("usersarray", (data) => {
   carinsideit.innerHTML = "";
   document.getElementById("thattext").innerText = data[1];
   myGlobalPara = data[1];
+  myGlobalParaLenght = data[1].split(" ").length;
+
   // MakesetTimeintervalreverse1sec();
   data[0].forEach((element) => {
     console.log(element);
-    carinsideit.innerHTML += `<div class="car">
-    
-            <span id= onlyvp${element.id} class="usernamehere">${element.username}</span>
+    carinsideit.innerHTML += `<div class="car" width = "758px">
+    <div > <span class="speedherena" id="speed${element.id}" style="padding: 1px; background-color: black; color: white;"></span></div>
+            <div id= onlyvp${element.id} class="usernamehere">${element.username}</div>
             <img id=${element.id} src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
-                        width="100"> <hr> <span class="speedherena" id=speed${element.id}></span></div>`;
+                        width="130px"> <hr> </div>`;
   });
-  console.log(data);
+  // Get the width of the div element with id "myDiv"
+  // setTimeout(() => {
+  //   var first = document.querySelector(".car").getBoundingClientRect().width;
+  //   console.log("the first width is: " + first + "px");
+  //   var divWidth = document.querySelector(".car").clientWidth;
+  //   console.log("the second width is: " + divWidth + "px");
+  //   document.querySelector(".car").style.border = "2px solid red";
+  // }, 5000);
+
+  console.log("data is", data);
 });
 document.getElementById("damtext").addEventListener("keyup", (event) => {
   const typedText = event.target.value;
@@ -306,14 +318,15 @@ socket.on("user_data", (data) => {
   console.log("hi");
   console.log(data);
 
-  let ss = data.id;
-  let d = document.getElementById(ss);
-  d.style.marginLeft = `${data.wordCount * 10}%`;
-
+  let d = document.getElementById(data.id);
+  d.style.marginLeft = `${
+    data.wordCount * ((758 - 100) / myGlobalParaLenght)
+  }px`;
+  // d.style.border = "4px solid red";
   if (startTime === null) {
     startTime = Date.now();
   }
-  const elapsedTime = (Date.now() - startTime) / 1000;
+  const elapsedTime = (Date.now() - startTime) / 1000; //dividing with 1000 to convert into secon+ds
   const wpm = Math.round((data.wordCount / elapsedTime) * 60);
 
   let snsnsn = document.getElementById(`speed${data.id}`);
