@@ -125,10 +125,10 @@ io.on("connection", (socket) => {
         console.log(user[0]);
         io.to(user[0].roomvalue).emit("user_data", user[0]);
       }
-      // console.log({ typedText, keyCode });
+
+      //after validating the typed text, sending the response to the frontend accordingly
       socket.emit("typing-update", {
         typedText,
-
         isTyping: true,
         socketID: socket.id,
         flag: true,

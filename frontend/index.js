@@ -205,7 +205,7 @@ function MakestartTimeIntervel1sec() {
     if (timeleft <= 0) {
       socket.emit("timeleft", { timeleft });
       clearInterval(downloadTimer);
-      document.getElementById("timerstart").innerHTML = "Race End";
+      document.getElementById("timerstart").innerHTML = "Race Ended";
       let damtext = document.getElementById("damtext");
       damtext.disabled = true;
     } else {
@@ -242,21 +242,16 @@ socket.on("message", (message) => {
 //============================================================================================>
 //recieving paragraph from server and appending into the dom
 
-//getting the input value here and sending to server for validation
-// document.getElementById("damtext").addEventListener("keyup", (event) => {
-//   const typedText = event.target.value;
-//   if (typedText.length <= myGlobalPara.length) {
-//     socket.emit("typedText", { typedText });
-//   }
-// });
-
 //updating the word per minute and moving the car from here
 const wordsPerMinute = 60;
 const carSpeed = 200; // adjust this as needed
 
+let myFlag;
+
 socket.on(
   "typing-update",
   ({ socketID, isTyping, typedText, flag, wordCount }) => {
+    myFlag = flag;
     console.log(typedText, flag);
     if (flag !== true && flag !== false) {
       let thattext = document.getElementById("thattext");
@@ -275,6 +270,7 @@ socket.on(
   }
 );
 
+let carContainerWidth;
 let myGlobalPara;
 let myGlobalParaLenght;
 socket.on("usersarray", (data) => {
@@ -294,25 +290,47 @@ socket.on("usersarray", (data) => {
             <img id=${element.id} src="https://tse4.mm.bing.net/th?id=OIP.oO33SYyCF2T5A8i1He_DKAHaCQ&pid=Api&P=0"
                         width="130px"> <hr> </div>`;
   });
-  // Get the width of the div element with id "myDiv"
-  // setTimeout(() => {
-  //   var first = document.querySelector(".car").getBoundingClientRect().width;
-  //   console.log("the first width is: " + first + "px");
-  //   var divWidth = document.querySelector(".car").clientWidth;
-  //   console.log("the second width is: " + divWidth + "px");
-  //   document.querySelector(".car").style.border = "2px solid red";
-  // }, 5000);
+
+  // Get the width of the div element with class "car"
+
+  setTimeout(() => {
+    carContainerWidth = document
+      .querySelector(".car")
+      .getBoundingClientRect().width;
+    console.log("the first width is: " + carContainerWidth + "px");
+    var divWidth = document.querySelector(".car").clientWidth;
+    console.log("the second width is: " + divWidth + "px");
+    // document.querySelector(".car").style.border = "2px solid red";
+  }, 2000);
 
   console.log("data is", data);
 });
 document.getElementById("damtext").addEventListener("keyup", (event) => {
   const typedText = event.target.value;
-  // console.log(typedText);
   if (typedText.length <= myGlobalPara.length) {
     socket.emit("typedText", { typedText });
   }
+  //if the typed letter is correct make the background of the input field green else red;
+  const isCorrect = checkIfLetterIsCorrect(typedText);
+  if (isCorrect) {
+    event.target.classList.add("correct");
+    event.target.classList.remove("incorrect");
+  } else {
+    event.target.classList.add("incorrect");
+    event.target.classList.remove("correct");
+  }
 });
 
+//checkLetter Function
+function checkIfLetterIsCorrect(typedText) {
+  if (
+    typedText[typedText.length - 1] === myGlobalPara[typedText.length - 1] &&
+    myFlag
+  ) {
+    return true;
+  }
+  return false;
+}
 //getting the user data here
 let startTime = null;
 let count = 0;
@@ -322,7 +340,7 @@ socket.on("user_data", (data) => {
 
   let d = document.getElementById(data.id);
   d.style.marginLeft = `${
-    data.wordCount * ((758 - 100) / myGlobalParaLenght)
+    data.wordCount * ((carContainerWidth - 130) / (myGlobalParaLenght - 2))
   }px`;
   // d.style.border = "4px solid red";
   if (startTime === null) {
