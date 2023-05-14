@@ -1355,6 +1355,210 @@ footer.nb-footer .copyright p {
     margin-right: 50px;
   }
 
+  /* footer */
+
+  .footervp {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    margin: auto;
+  }
+  #inpufoot {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1100px) {
+  .nav-items {
+    display: none;
+  }
+  #rightside2 {
+    display: none;
+  }
+
+  .headdown1 {
+    width: 100%;
+  }
+  .bottomrightbig {
+    display: none;
+  }
+  .bottomleftbig {
+    display: none;
+  }
+  footer {
+    margin-top: 90%;
+  }
+  #kingname2323 {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 750px) {
+  .nav-items {
+    display: none;
+  }
+  #rightside2 {
+    display: none;
+  }
+  .leftsidenavvv {
+    display: none;
+  }
+
+  .headdown1 {
+    width: 100%;
+  }
+
+  #sane1sane1 {
+    width: 90%;
+  }
+
+  #upperdiv {
+    width: 90%;
+  }
+  #btnstart {
+    display: block;
+    margin: auto;
+    margin-left: 140px;
+  }
+
+  /* footer */
+  .footervp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  #inpufoot {
+    width: 70%;
+  }
+
+  video {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .btnleft {
+    margin-right: 30%;
+  }
+
+  .samimage {
+    display: none;
+  }
+
+  .textsubmain {
+    font-size: 16px;
+  }
+
+  .samimage img {
+    width: 80%;
+    margin-top: 50%;
+    text-align: center;
+  }
+  #btnstart {
+    padding: 10px;
+    margin-left: 0px;
+  }
+  #sane1sane1 {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
+  .divupper {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #a0aecd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .headdown1 {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .herealldata {
+    display: none;
+  }
+
+  .bottomrightbig {
+    display: none;
+  }
+
+  .bottomrightbig {
+    display: none;
+  }
+  .bottomleftbig {
+    display: none;
+  }
+  footer {
+    margin-top: 120%;
+  }
+  #kingname2323 {
+    margin-top: 19%;
+  }
+  #kvkv2332 {
+    display: none;
+  }
+  #roomshowingbro {
+    margin-left: -30px;
+  }
+  .headhaibhaihead {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  /* Styles for devices with a screen width between 768px and 1024px */
+
+  .nav-items {
+    display: none;
+  }
+  #rightside2 {
+    display: none;
+  }
+  .leftsidenavvv {
+    display: none;
+  }
+
+  /* footer */
+  .footervp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  #inpufoot {
+    width: 70%;
+  }
+
+  video {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .btnleft {
+    margin-right: 30%;
+  }
+
+  #imglogo {
+    width: 300px;
+    height: 150px;
+    margin-top: -40px;
+    margin-right: 50px;
+  }
 
   /* footer */
 
@@ -1369,219 +1573,14 @@ footer.nb-footer .copyright p {
   }
 }
 
-@media screen and (min-width:750px) and (max-width: 1100px) {
-    
-    .nav-items {
-        display: none;
-    }
-    #rightside2{
-        display: none;
-    }
-
-    .headdown1 {
-        width: 100%;
-    }
-    .bottomrightbig{
-        display: none;
-    }
-    .bottomleftbig{
-        display: none;
-    }
-    footer{
-        margin-top: 90%;
-    }
-    #kingname2323 {
-        margin-top: 10%;
-    }
-    
+/* change the background color of the input field
+ */
+.correct {
+  background-color: #07c51e; /* Green background color */
+  color: black;
 }
 
-
-@media screen and (min-width:450px) and (max-width: 750px) {
-    .nav-items {
-        display: none;
-    }
-    #rightside2{
-        display: none;
-    }
-    .leftsidenavvv {
-        display: none;
-    }
-    
-    .headdown1 {
-        width: 100%;
-    }
-
-    #sane1sane1 {
-        width: 90%;
-    }
-
-    #upperdiv {
-        width: 90%;
-    }
-    #btnstart{
-       display: block;
-       margin: auto;
-       margin-left: 140px;
-    }
-
-
-    /* footer */
-    .footervp {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
-        margin: auto;
-        justify-content: space-between;
-    }
-
-    #inpufoot {
-        width: 70%;
-    }
-
-    video {
-        position: absolute;
-        top: 10%;
-        left: 0;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .btnleft {
-        margin-right: 30%;
-    }
-    
-
-    .samimage{
-        display: none;
-    }
-
-    .textsubmain {
-        font-size: 16px;
-    }
-
-    .samimage img {
-        width: 80%;
-        margin-top: 50%;
-        text-align: center;
-    }
-    #btnstart{
-       padding: 10px;
-     margin-left: 0px;
-    }
-    #sane1sane1{
-        padding-top: 30px;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius : 10px;
-    }
-
-    .divupper{
-        margin-top: 10px;
-        border-radius: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        background-color: #A0AECD;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .headdown1 {
-        padding: 20px;
-        border-radius: 10px;
-    }
-    .herealldata{
-        display: none;
-    }
-
-    .bottomrightbig {
-        display: none;
-    }
-    
-    .bottomrightbig{
-        display: none;
-    }
-    .bottomleftbig{
-        display: none;
-    }
-    footer{
-        margin-top: 120%;
-    }
-    #kingname2323 {
-        margin-top: 19%;
-    }
-    #kvkv2332{
-        display: none;
-    }
-    #roomshowingbro {
-        margin-left: -30px;
-    }
-    .headhaibhaihead{
-        display: none;
-    }
+.incorrect {
+  background-color: #d51b1b; /* Red background color */
+  color: white;
 }
-
-
-
-@media screen and (min-width:0px) and (max-width: 450px) {
-    /* Styles for devices with a screen width between 768px and 1024px */
-
-
-    .nav-items {
-        display: none;
-    }
-    #rightside2{
-        display: none;
-    }
-    .leftsidenavvv {
-        display: none;
-    }
-   
-
-    /* footer */
-    .footervp {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
-        margin: auto;
-        justify-content: space-between;
-    }
-
-    #inpufoot {
-        width: 70%;
-    }
-
-    video {
-        position: absolute;
-        top: 10%;
-        left: 0;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .btnleft {
-        margin-right: 30%;
-    }
-
-    #imglogo {
-        width: 300px;
-        height: 150px;
-        margin-top: -40px;
-        margin-right: 50px;
-    }
-
-
-
-    /* footer */
-
-    .footervp {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 90%;
-        margin: auto;
-    }
-    #inpufoot {
-        width: 70%;
-    }
-}
-
