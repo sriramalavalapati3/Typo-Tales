@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-require('dotenv').config()
+require("dotenv").config();
 const socketio = require("socket.io");
 const { userRouter } = require("./routes/userRoutes");
 const mongoose = require("mongoose");
@@ -9,11 +9,15 @@ const { User, update_word_function } = require("./user");
 let { users } = require("./user");
 let cors = require("cors");
 let { connection } = require("./db");
-const { groups, handleParagraph,deleteRoooID } = require("./handleParagraph");
+const { groups, handleParagraph, deleteRoooID } = require("./handleParagraph");
 app.use(cors());
 app.use(express.json());
 
 app.use(userRouter);
+
+app.get("/", (req, res) => {
+  res.send("Hey !! You are on the typoTales home page !!");
+});
 
 // length of the id (default is 30)
 var len = 10;
@@ -69,8 +73,6 @@ io.on("connection", (socket) => {
   let Room;
   socket.on("joinroom", ({ username, roomvalue }) => {
     const user = User(socket.id, username, roomvalue);
-    // console.log(roomvalue + "from join room");
-    // console.log(socket.id + "from line no 68");
     socket.join(roomvalue);
     Room = roomvalue;
     let user_Data = users.filter((ele) => {
@@ -89,12 +91,12 @@ io.on("connection", (socket) => {
   });
 
   console.log(`One user connected, total user : ${count}`);
-socket.on("delete",(roomid)=>{
-  users=users.filter((ele)=>{
-   return ele.roomvalue!==roomid
-  })
-  deleteRoooID(roomid)
-})
+  socket.on("delete", (roomid) => {
+    users = users.filter((ele) => {
+      return ele.roomvalue !== roomid;
+    });
+    deleteRoooID(roomid);
+  });
 
   socket.on("timeleft", (data) => {
     let { timeleft } = data;
@@ -108,8 +110,6 @@ socket.on("delete",(roomid)=>{
 
   //recieving the typed text from client on "typeText" Event
   socket.on("typedText", ({ typedText }) => {
-    console.log(`person having id ${socket.id} is typing :`, typedText);
-
     //here checking the latest letter is same as in paragraph at that posistion
     if (
       typedText[typedText.length - 1] == groups[Room][typedText.length - 1] &&
@@ -117,7 +117,6 @@ socket.on("delete",(roomid)=>{
     ) {
       //if the user has typed the entire paragraph then this will be sent to the frontend
       if (typedText.length == groups[Room].length) {
-        console.log(typedText);
         return socket.emit("typing-update", {
           typedText: "You have finished the race buddy 👏👏👏",
           flag: "Race Completed",
@@ -126,8 +125,6 @@ socket.on("delete",(roomid)=>{
       //here whenever the typed text is ' ', i'm calling the update_word_function which is increasing the count or word
       if (typedText[typedText.length - 1] == " ") {
         let user = update_word_function(socket.id, typedText);
-        console.log(user);
-        console.log(user[0]);
         //after updating the word, emitting the user_data in the room, which will contain socket.id, total words that he typed,etc.
         io.to(user[0].roomvalue).emit("user_data", user[0]);
       }
