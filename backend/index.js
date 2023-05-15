@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require('dotenv').config()
 const socketio = require("socket.io");
 const { userRouter } = require("./routes/userRoutes");
 const mongoose = require("mongoose");
@@ -8,7 +9,7 @@ const { User, update_word_function } = require("./user");
 let { users } = require("./user");
 let cors = require("cors");
 let { connection } = require("./db");
-const { groups, handleParagraph } = require("./handleParagraph");
+const { groups, handleParagraph,deleteRoooID } = require("./handleParagraph");
 app.use(cors());
 app.use(express.json());
 
@@ -21,7 +22,7 @@ var len = 10;
 // default is aA0 it has a chance for lowercased capitals and numbers
 var pattern = "aA0";
 
-const expressServer = app.listen(8080, async () => {
+const expressServer = app.listen(process.env.PORT, async () => {
   try {
     await connection;
     console.log("connected to db");
@@ -88,6 +89,12 @@ io.on("connection", (socket) => {
   });
 
   console.log(`One user connected, total user : ${count}`);
+socket.on("delete",(roomid)=>{
+  users=users.filter((ele)=>{
+   return ele.roomvalue!==roomid
+  })
+  deleteRoooID(roomid)
+})
 
   socket.on("timeleft", (data) => {
     let { timeleft } = data;
