@@ -8,10 +8,10 @@ function handleParagraph(groupID) {
   }
 }
 
-// function deleteRoooID(roupID) {
-//   if (groups[groups].member.length === 3) {
-//     delete groups[roupID];
-//   }
-//   return;
-// }
-module.exports = { groups, handleParagraph };
+function deleteRoooID(roupID) {
+  
+    delete groups[roupID];
+
+  return;
+ }
+module.exports = { groups, handleParagraph,deleteRoooID};

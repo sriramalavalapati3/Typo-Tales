@@ -219,12 +219,17 @@ socket.on("Time", (data) => {
   let { timeleft } = data;
   if (timeleft === 1) {
     document.getElementById("damtext").disabled = true;
+    let roomid=sessionStorage.getItem("ROOM")
+    socket.emit("delete",roomid)
   }
   console.log(timeleft);
   document.getElementById("timerstart").innerHTML = timeleft;
+
 });
 function Join() {
   let roomvalue = document.querySelector("#roomvalue").value;
+  
+  sessionStorage.setItem("ROOM",roomvalue)
   socket.emit("joinroom", { username, roomvalue });
 }
 let smokkergdin = document.getElementById("smokkergdin");
