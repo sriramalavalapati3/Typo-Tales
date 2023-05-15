@@ -219,17 +219,16 @@ socket.on("Time", (data) => {
   let { timeleft } = data;
   if (timeleft === 1) {
     document.getElementById("damtext").disabled = true;
-    let roomid=sessionStorage.getItem("ROOM")
-    socket.emit("delete",roomid)
+    let roomid = sessionStorage.getItem("ROOM");
+    socket.emit("delete", roomid);
   }
   console.log(timeleft);
   document.getElementById("timerstart").innerHTML = timeleft;
-
 });
 function Join() {
   let roomvalue = document.querySelector("#roomvalue").value;
-  
-  sessionStorage.setItem("ROOM",roomvalue)
+
+  sessionStorage.setItem("ROOM", roomvalue);
   socket.emit("joinroom", { username, roomvalue });
 }
 let smokkergdin = document.getElementById("smokkergdin");
@@ -357,7 +356,7 @@ socket.on("user_data", (data) => {
   let snsnsn = document.getElementById(`speed${data.id}`);
   snsnsn.innerHTML = `${wpm} wpm`;
 
-  if (data.wordCount === 4) {
+  if (data.wordCount === myGlobalParaLenght - 1) {
     let userhere20 = document.getElementById(`onlyvp${data.id}`);
     userhere20.innerHTML = `${data.username}'s position ${++count}`;
   }
