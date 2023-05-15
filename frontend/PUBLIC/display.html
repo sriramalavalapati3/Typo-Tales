@@ -37,7 +37,9 @@
     let value = urlParams.get("value");
 
     console.log(username);
-    const socket = io("http://localhost:8080/", { transports: ["websocket"] });
+    const socket = io("https://typotales-hchv.onrender.com/", {
+      transports: ["websocket"],
+    });
 
     if (value == 0) {
       room.style.display = "block";

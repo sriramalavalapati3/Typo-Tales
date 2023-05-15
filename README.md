@@ -1,24 +1,22 @@
 # fabulous-vest-203
 
-
-
-
 ![Alt Text](https://drive.google.com/uc?id=1CZGRGsX65QfAaKT93XHxWZ8Fxyzr_wmp)
-
 
 ## Typo Tales
 
 Typo Tales is a typing platform that allows users to take part in typing by creating groups with their friends and also practice alone. This project is a clone of TypoTales.com and was built within 5 days by a team of 4 members.
 
 ## Cloning of typeracer application
+
 ```
 It is a collabrative project built by team of four members in 5 days.
 This app allows users to enhance their typing skills and compitete among friends and family members and practice privetly  real-time.
 ```
 
 ## Deploy Link
+
 ```
--Netlify website link-> 
+-Netlify website link->
 -render Socket link ->
 ```
 
@@ -32,6 +30,7 @@ Authentication system to manage user accounts and sessions
 Responsive design for optimal user experience on all devices
 
 ## Tech Stacks Used
+
 <p align = "center">
 <img src="https://github.com/PrinceCorwin/Useful-tech-icons/blob/main/images/HTML.png" alt="html" width="55" height="55"/>
 <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" width="50" height="55"/>
@@ -45,7 +44,7 @@ Responsive design for optimal user experience on all devices
   
 </p>
 
-## NPM MODULES 
+## NPM MODULES
 
     "express": "^4.18.2",
     "mongoose": "^7.0.3",
@@ -55,8 +54,9 @@ Responsive design for optimal user experience on all devices
     "socket.io": "^4.6.1",
      "dotenv": "^16.0.3",
      REDIS
- 
+
 ## NPM Packages
+
 <p align = "center">
 <img src="https://repository-images.githubusercontent.com/139898859/9617c480-81c2-11ea-94fc-322231ead1f0" alt="bcrypt.png" width="70" height="50"/>
 <img src="https://github.com/faraz412/cozy-passenger-4798/blob/main/Frontend/Files/cors.png?raw=true" alt="cors" width="70" height="50"/>
@@ -69,31 +69,41 @@ Responsive design for optimal user experience on all devices
 </p>
 
 ## Run Locally
+
 ### Clone this Project
+
 ```
 https://github.com/sriramalavalapati3/fabulous-vest-203.git
 ```
+
 ### Install npm Packages
 
 ```javascript
 npm i --global
 ```
+
 ### Go to Backend Folder
+
 ```
 cd backend1
 cd index.js
 ```
+
 ### Run Server
+
 ```javascript
 
 npm run server
 ```
+
 ```
 ### Runs the project in the development mode
 
-[http://localhost:8080](http://localhost:8080)
+[https://typotales-hchv.onrender.com](https://typotales-hchv.onrender.com)
 ```
+
 ### Environment Variables Required
+
 `mongoURL`
 
 `PORT`
@@ -106,24 +116,12 @@ npm run server
 
 `jwtrefreshToken = YourRefreshToken`
 
-
-
 ![Alt Text](https://drive.google.com/uc?id=1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7)
 
 //
-
-
-
-
 
 ![Alt Text](https://drive.google.com/uc?id=1sAZmwTICWri0ROw0aTNmvCPzqc9TSJyB)
 
 //
 
-
-
-
-
 ![Alt Text](https://drive.google.com/uc?id=1hgOYkBT6DNSHNqFjZPQhP43mXZIsN-eT)
-
-

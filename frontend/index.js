@@ -21,7 +21,7 @@ logout.addEventListener("click", async () => {
       token: s,
     };
 
-    let d = await fetch("http://localhost:8080/logout", {
+    let d = await fetch("https://typotales-hchv.onrender.com/logout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -155,7 +155,7 @@ kvkv2332.addEventListener("click", function () {
 });
 
 // ----------------------------------------------------------------------------------------------------------------------------------------Ansari code here
-const socket = io("http://localhost:8080", {
+const socket = io("https://typotales-hchv.onrender.com", {
   transports: ["websocket"],
 });
 
@@ -174,7 +174,6 @@ if (value == 0) {
   socket.emit("username", { username });
   socket.on("roomno", (id) => {
     roomnumber.innerText = id;
-    console.log(id);
     create.style.display = "none";
     join.style.display = "none";
     raceagainbtn.style.display = "block";
@@ -222,7 +221,6 @@ socket.on("Time", (data) => {
     let roomid = sessionStorage.getItem("ROOM");
     socket.emit("delete", roomid);
   }
-  console.log(timeleft);
   document.getElementById("timerstart").innerHTML = timeleft;
 });
 function Join() {
@@ -285,9 +283,7 @@ socket.on("usersarray", (data) => {
   myGlobalParaLenght = data[1].split(" ").length;
 
   // MakesetTimeintervalreverse1sec();
-
   data[0].forEach((element) => {
-    console.log(element);
     carinsideit.innerHTML += `<div class="car" width = "758px">
     <div > <span class="speedherena" id="speed${element.id}" style="padding: 1px; background-color: black; color: white;"></span></div>
             <div id= onlyvp${element.id} class="usernamehere">${element.username}</div>
@@ -296,18 +292,11 @@ socket.on("usersarray", (data) => {
   });
 
   // Get the width of the div element with class "car"
-
   setTimeout(() => {
     carContainerWidth = document
       .querySelector(".car")
       .getBoundingClientRect().width;
-    console.log("the first width is: " + carContainerWidth + "px");
-    var divWidth = document.querySelector(".car").clientWidth;
-    console.log("the second width is: " + divWidth + "px");
-    // document.querySelector(".car").style.border = "2px solid red";
   }, 2000);
-
-  console.log("data is", data);
 });
 document.getElementById("damtext").addEventListener("keyup", (event) => {
   const typedText = event.target.value;
@@ -339,14 +328,11 @@ function checkIfLetterIsCorrect(typedText) {
 let startTime = null;
 let count = 0;
 socket.on("user_data", (data) => {
-  console.log("hi");
-  console.log(data);
-
   let d = document.getElementById(data.id);
   d.style.marginLeft = `${
     data.wordCount * ((carContainerWidth - 130) / (myGlobalParaLenght - 2))
   }px`;
-  // d.style.border = "4px solid red";
+
   if (startTime === null) {
     startTime = Date.now();
   }
