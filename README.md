@@ -16,8 +16,8 @@ This app allows users to enhance their typing skills and compitete among friends
 ## Deploy Link
 
 ```
--Netlify website link->
--render Socket link ->
+-Netlify website link->https://cheerful-selkie-0b14c4.netlify.app/
+-render Socket link ->https://typotales-hchv.onrender.com/
 ```
 
 ## Features
