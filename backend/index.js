@@ -99,30 +99,29 @@ io.on("connection", (socket) => {
     socket.broadcast.to(Room).emit("forall", data);
   });
 
-  //emitting the random paragraph here
-  // let myParagraph = para[generateRandomNumber()];
-  //socket.emit("thePara", myParagraph);
-
   //recieving the typed text from client on "typeText" Event
   socket.on("typedText", ({ typedText }) => {
     console.log(`person having id ${socket.id} is typing :`, typedText);
 
+    //here checking the latest letter is same as in paragraph at that posistion
     if (
       typedText[typedText.length - 1] == groups[Room][typedText.length - 1] &&
       includeFunction(groups[Room], typedText)
     ) {
+      //if the user has typed the entire paragraph then this will be sent to the frontend
       if (typedText.length == groups[Room].length) {
         console.log(typedText);
-        // users = []
         return socket.emit("typing-update", {
           typedText: "You have finished the race buddy 👏👏👏",
           flag: "Race Completed",
         });
       }
+      //here whenever the typed text is ' ', i'm calling the update_word_function which is increasing the count or word
       if (typedText[typedText.length - 1] == " ") {
         let user = update_word_function(socket.id, typedText);
         console.log(user);
         console.log(user[0]);
+        //after updating the word, emitting the user_data in the room, which will contain socket.id, total words that he typed,etc.
         io.to(user[0].roomvalue).emit("user_data", user[0]);
       }
 
@@ -150,7 +149,7 @@ io.on("connection", (socket) => {
   });
 });
 
-/*Here I am checking includes */
+/*Here I am checking if the coming typed paragraph is included by the our normal paragraph or not  */
 const includeFunction = (myParagraph, typedText) => {
   if (myParagraph.includes(typedText)) {
     return true;
