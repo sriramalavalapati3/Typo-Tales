@@ -130,5 +130,5 @@ npm run server
 # Login UI
 ![Alt Text](https://drive.google.com/uc?id=1OC1UsUQ3bxm6D3Eb9AdXmn4JfPcxT0WN)
 
-                  <h1 align="center"><B>Authors<B><h1>
-                  <a src="https://github.com/sriramalavalapati3">SRIRAM ALAVALAPATI</a>
+<h1 align="center"><B>Authors<B></h1>
+<a src="https://github.com/sriramalavalapati3">SRIRAM ALAVALAPATI</a>
