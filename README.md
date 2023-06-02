@@ -115,18 +115,20 @@ npm run server
 `jwtnormalToken = yourToken`
 
 `jwtrefreshToken = YourRefreshToken`
-
+# Landing UI
 ![Alt Text](https://drive.google.com/uc?id=1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7)
 
 //
-
+# Game UI
 ![Alt Text](https://drive.google.com/uc?id=1sAZmwTICWri0ROw0aTNmvCPzqc9TSJyB)
 
 //
-
+# Register UI
 ![Alt Text](https://drive.google.com/uc?id=1Hq1rrR40X7lap4vHiWpU2ey8k9dz5fGo)
 
 //
-
+# Login UI
 ![Alt Text](https://drive.google.com/uc?id=1OC1UsUQ3bxm6D3Eb9AdXmn4JfPcxT0WN)
 
+                  <h1 align="center"><B>Authors<B><h1>
+                  <a src="https://github.com/sriramalavalapati3">SRIRAM ALAVALAPATI</a>
