@@ -131,9 +131,11 @@ npm run server
 ![Alt Text](https://drive.google.com/uc?id=1OC1UsUQ3bxm6D3Eb9AdXmn4JfPcxT0WN)
 
 <h1 align="center"><B>Authors<B></h1>
+  <div align="center">
 <a align="center" href="https://github.com/sriramalavalapati3">Sriram Alavalapati</a> <br>
 <a align="center" href="https://github.com/Ashik0101">Ashik Ansari</a><br>
 <a align="center" href="https://github.com/vishalpadaswan3">Vishal Padaswan</a><br>
 <a align="center" href="https://github.com/guptag0808">Saurabh Kumar Gupta</a><br>
+  </div>
 
 
