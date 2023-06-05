@@ -45,7 +45,8 @@ Responsive design for optimal user experience on all devices
 </p>
 
 ## NPM MODULES
-
+```
+{
     "express": "^4.18.2",
     "mongoose": "^7.0.3",
     "nodemon": "^2.0.22",
@@ -54,7 +55,8 @@ Responsive design for optimal user experience on all devices
     "socket.io": "^4.6.1",
      "dotenv": "^16.0.3",
      REDIS
-
+}
+```
 ## NPM Packages
 
 <p align = "center">
@@ -85,7 +87,7 @@ npm i --global
 ### Go to Backend Folder
 
 ```
-cd backend1
+cd backend
 cd index.js
 ```
 
@@ -118,15 +120,15 @@ npm run server
 # Landing UI
 ![Alt Text](https://drive.google.com/uc?id=1ZtfKh-L35Fu_LN_eQczkWd5NqhZHaJn7)
 
-//
+
 # Game UI
 ![Alt Text](https://drive.google.com/uc?id=1sAZmwTICWri0ROw0aTNmvCPzqc9TSJyB)
 
-//
+
 # Register UI
 ![Alt Text](https://drive.google.com/uc?id=1Hq1rrR40X7lap4vHiWpU2ey8k9dz5fGo)
 
-//
+
 # Login UI
 ![Alt Text](https://drive.google.com/uc?id=1OC1UsUQ3bxm6D3Eb9AdXmn4JfPcxT0WN)
 
